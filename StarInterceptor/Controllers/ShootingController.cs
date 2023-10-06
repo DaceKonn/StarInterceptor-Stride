@@ -2,6 +2,7 @@
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Input;
+using System.Linq;
 
 namespace StarInterceptor.Controllers
 {
@@ -10,11 +11,7 @@ namespace StarInterceptor.Controllers
     {
 
         public bool Enabled { get; set; }
-        public Prefab Bullet { get; set; }
-
         public ShipState ShipState { get; set; }
-
-        public float TimerDelay = 0.2f;
 
 
         private float _timer = 0.0f;
@@ -36,7 +33,7 @@ namespace StarInterceptor.Controllers
                     return;
                 }
 
-                if (IfShooting())
+                if (IfShooting() && ShipState.Weapons.Any())
                 {
                     SpawnBullets();
                 }
@@ -50,10 +47,10 @@ namespace StarInterceptor.Controllers
         private void SpawnBullets()
         {
 
-            var entity = Bullet.Instantiate()[0];
+            var entity = ShipState.Weapons[0].Weapon.Bullet.Instantiate()[0];
             entity.Transform.Position = Entity.Transform.Position + new Vector3(0f, 0.5f, -0.2f);
             Entity.Scene.Entities.Add(entity);
-            _timer = TimerDelay;
+            _timer = ShipState.Weapons[0].Weapon.BaseDelay;
 
         }
 

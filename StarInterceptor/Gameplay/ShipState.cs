@@ -9,17 +9,24 @@ using Stride.Engine;
 using StarInterceptor.Gameplay.Weapons;
 using Stride.Core;
 using Silk.NET.OpenXR;
+using Stride.Core.Serialization;
+using Stride.Core.Annotations;
+using System.ComponentModel;
+using Stride.Core.Collections;
 
 namespace StarInterceptor.Gameplay
 {
     public class ShipState : SyncScript
     {
-        public List<WeaponSlot> Weapons = new List<WeaponSlot>();
+        [DataMember(200)]
+        [Category]
+        [MemberCollection(NotNullItems = true)]
+        public FastCollection<WeaponSlot> Weapons = new FastCollection<WeaponSlot>();
 
 
         public override void Start()
         {
-            // Initialization of the script.
+          // Initialization of the script.
         }
 
         public override void Update()

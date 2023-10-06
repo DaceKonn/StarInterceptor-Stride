@@ -109,7 +109,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 49162a98-7d42-4bcb-a250-1277277b74de
-                Name: SmallObstacleSpawner
+                Name: UnbreakableObstacleSpawner
                 Components:
                     a82333f5b333c45374d793e402cb4e20: !TransformComponent
                         Id: 8c2fe378-6d4e-4a70-9307-94266d4596ee
@@ -339,10 +339,13 @@ Hierarchy:
                     d1f5718123b0cd98cacbe7381795a024: !StarInterceptor.Gameplay.ShipState,StarInterceptor
                         Id: af43752b-e1b8-4ac5-82d1-407a0c75f5bd
                         Weapons:
-                            2e7ab06a4fc679d4958eb897be3411db:
+                            e1db017bf9fc59cd89234f8df79519d7:
                                 Weapon: !StarInterceptor.Gameplay.Weapons.Laser,StarInterceptor
                                     Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
                                     BaseDelay: 0.2
+                                Enabled: true
+                            2e7ab06a4fc679d4958eb897be3411db*:
+                                Weapon: null
                                 Enabled: true
                     0c60407fc484372978cd774fb25fa37e: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
                         Id: 4d1f3360-7075-4d0b-877b-87f077969ca6
@@ -351,10 +354,8 @@ Hierarchy:
                         MouseSensitivity: 10.0
                     8824be57bc058146d8a7ea5e1e4b9cac: !StarInterceptor.Controllers.ShootingController,StarInterceptor
                         Id: 097e2e69-75c4-4f9f-bf9a-8ea18cbaf6ed
-                        TimerDelay: 0.2
                         Enabled: true
-                        Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
-                        ShipState: null
+                        ShipState: ref!! af43752b-e1b8-4ac5-82d1-407a0c75f5bd
             Base:
                 BasePartAsset: aa4ea6f4-11d1-4fd1-acdd-d5452f07f2f1:Prefabs/Spaceship
                 BasePartId: 6eccabac-762a-438e-af56-15b2b80802c7

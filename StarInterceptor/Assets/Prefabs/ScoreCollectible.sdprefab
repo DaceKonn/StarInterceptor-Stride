@@ -45,6 +45,16 @@ Hierarchy:
                                 Height: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    45fea50fd832867c362fcf5d43c57d37: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
+                        Id: 7953ef0d-1f04-450c-be19-13202974d3d4
+                        Speed: 3.0
+                    29b293da855af932ad4f97fd2f3609af: !StarInterceptor.Gameplay.Trigger,StarInterceptor
+                        Id: 9b984b89-61c8-490b-b195-13008d547e55
+                        TriggerCondition: StartOnly
+                    5bfd01d160fec38e9abd2a716c5a24a1: !StarInterceptor.Gameplay.CollectibleCollisionHandler,StarInterceptor
+                        Id: 0c2a02b2-6cb9-4874-8bfd-5a27b3600dd8
+                        Trigger: ref!! 9b984b89-61c8-490b-b195-13008d547e55
+                        ScoreValue: 10
         -   Entity:
                 Id: 743582b6-83d2-4dea-a973-b68286fbe798
                 Name: Point light

@@ -154,7 +154,7 @@ Hierarchy:
                     d1f5718123b0cd98cacbe7381795a024: !StarInterceptor.Gameplay.ShipState,StarInterceptor
                         Id: 888810cb-9e83-4dca-86ea-c369dddb3038
                         Weapons:
-                            2e7ab06a4fc679d4958eb897be3411db:
+                            e1db017bf9fc59cd89234f8df79519d7:
                                 Weapon: !StarInterceptor.Gameplay.Weapons.Laser,StarInterceptor
                                     Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
                                     BaseDelay: 0.2
@@ -166,10 +166,8 @@ Hierarchy:
                         MouseSensitivity: 10.0
                     8824be57bc058146d8a7ea5e1e4b9cac: !StarInterceptor.Controllers.ShootingController,StarInterceptor
                         Id: aef359c1-f4e8-4e7c-86b3-ab21b35b3bfc
-                        TimerDelay: 0.2
                         Enabled: true
-                        Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
-                        ShipState: null
+                        ShipState: ref!! 888810cb-9e83-4dca-86ea-c369dddb3038
         -   Entity:
                 Id: cdf5ad65-c159-4719-91d9-935765537538
                 Name: Spot light
