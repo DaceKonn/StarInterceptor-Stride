@@ -9,11 +9,11 @@ namespace StarInterceptor.Gameplay
     {
         public int ScoreValue = 10;
 
-        protected override Func<Task> cleanupTask(Entity collidedEntity)
+        protected override Func<Task> CleanupTask(Entity collidedEntity)
         {
-            if (collidedEntity != null && collidedEntity.Name == "Spaceship" && GameScores.Hull >= 0)
+            if (collidedEntity != null && collidedEntity.Name == "Spaceship" && _gameScores.Hull >= 0)
             {
-                GameScores.Score += ScoreValue;
+                _gameScores.Score += ScoreValue;
             }
 
             return async () =>

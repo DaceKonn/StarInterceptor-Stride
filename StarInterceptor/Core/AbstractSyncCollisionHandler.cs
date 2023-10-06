@@ -7,25 +7,26 @@ using System.Threading.Tasks;
 
 namespace StarInterceptor.Core
 {
+    [ComponentCategory("CollisionHelpers")]
     public abstract class AbstractSyncCollisionHandler : SyncScript
     {
         // Declared public member fields and properties will show in the game studio
         public Trigger Trigger { get; set; }
-        protected GameScores GameScores { get; set; }
-        private EventReceiver<CollisionEvent> TriggeredEvent;
-        private bool activated = false;
+        protected GameScores _gameScores { get; set; }
+        private EventReceiver<CollisionEvent> _triggeredEvent;
+        private bool _activated = false;
 
         public override void Start()
         {
-            TriggeredEvent = (Trigger != null) ? new EventReceiver<CollisionEvent>(Trigger.TriggerEvent) : null;
-            GameScores = Entity.Scene.Entities.Where(e => e.Name == "LevelUI").First().Components.Get<GameScores>();
+            _triggeredEvent = (Trigger != null) ? new EventReceiver<CollisionEvent>(Trigger.TriggerEvent) : null;
+            _gameScores = Entity.Scene.Entities.Where(e => e.Name == "LevelUI").First().Components.Get<GameScores>();
             // Initialization of the script.
         }
 
         public override void Update()
         {
             CollisionEvent collisionEvent;
-            if (!activated && (TriggeredEvent?.TryReceive(out collisionEvent) ?? false))
+            if (!_activated && (_triggeredEvent?.TryReceive(out collisionEvent) ?? false))
             {
                 //Log.Info($"Colided entity: {collisionEvent.Entity}");
                 CollisionStarted(collisionEvent);
@@ -35,11 +36,11 @@ namespace StarInterceptor.Core
 
         protected void CollisionStarted(CollisionEvent collisionEvent)
         {
-            activated = true;
+            _activated = true;
 
-            Script.AddTask(cleanupTask(collisionEvent.Entity));
+            Script.AddTask(CleanupTask(collisionEvent.Entity));
         }
 
-        protected abstract Func<Task> cleanupTask(Entity collidedEntity);
+        protected abstract Func<Task> CleanupTask(Entity collidedEntity);
     }
 }

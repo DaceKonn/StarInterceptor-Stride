@@ -1,19 +1,23 @@
-﻿using Stride.Core.Mathematics;
+﻿using StarInterceptor.Gameplay;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Input;
 
 namespace StarInterceptor.Controllers
 {
+    [ComponentCategory("Controllers")]
     public class ShootingController : SyncScript
     {
 
         public bool Enabled { get; set; }
         public Prefab Bullet { get; set; }
 
+        public ShipState ShipState { get; set; }
+
         public float TimerDelay = 0.2f;
 
 
-        private float Timer = 0.0f;
+        private float _timer = 0.0f;
         // Declared public member fields and properties will show in the game studio
 
         public override void Start()
@@ -26,9 +30,9 @@ namespace StarInterceptor.Controllers
             
             if (Enabled)
             {
-                if (Timer > 0.0f)
+                if (_timer > 0.0f)
                 {
-                    Timer -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                    _timer -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
                     return;
                 }
 
@@ -49,7 +53,7 @@ namespace StarInterceptor.Controllers
             var entity = Bullet.Instantiate()[0];
             entity.Transform.Position = Entity.Transform.Position + new Vector3(0f, 0.5f, -0.2f);
             Entity.Scene.Entities.Add(entity);
-            Timer = TimerDelay;
+            _timer = TimerDelay;
 
         }
 

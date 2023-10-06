@@ -7,6 +7,7 @@ using Stride.Physics;
 
 namespace StarInterceptor.Controllers
 {
+    [ComponentCategory("Controllers")]
     public class MouseFollowController : SyncScript
     {
         public bool Enabled;
@@ -15,15 +16,15 @@ namespace StarInterceptor.Controllers
         public Speed Speed = new Speed(7f, 1f);
         public float MouseSensitivity = 10.0f;
 
-        Vector3 moveVector = new Vector3(0, 0, 0);
+        private Vector3 _moveVector = new Vector3(0, 0, 0);
 
-        private GameConfiguration GameConfiguration;
-        private CharacterComponent characterComponent;
+        private GameConfiguration _gameConfiguration;
+        private CharacterComponent _characterComponent;
 
         public override void Start()
         {
-            GameConfiguration = Services.GetService<IGameSettingsService>()?.Settings.Configurations.Get<GameConfiguration>() ?? new GameConfiguration();
-            characterComponent = Entity.Components.Get<CharacterComponent>();
+            _gameConfiguration = Services.GetService<IGameSettingsService>()?.Settings.Configurations.Get<GameConfiguration>() ?? new GameConfiguration();
+            _characterComponent = Entity.Components.Get<CharacterComponent>();
 
         }
 
@@ -65,11 +66,11 @@ namespace StarInterceptor.Controllers
 
         private void UpdateEntityRotation(float deltaTime)
         {
-            var rotationDirection = -moveVector.X;
+            var rotationDirection = -_moveVector.X;
             AngleSingle angleSingle = new AngleSingle(90f * rotationDirection, AngleType.Degree);
 
             Entity.Transform.Rotation = Quaternion.RotationZ(angleSingle.Radians);
-            characterComponent.UpdatePhysicsTransformation();
+            _characterComponent.UpdatePhysicsTransformation();
 
         }
 
@@ -87,24 +88,24 @@ namespace StarInterceptor.Controllers
         private void UpdateEntityPosition(float deltaTime)
         {
             var currentEntityPosition = Entity.Transform.Position;
-            var newEntityPosition = currentEntityPosition + new Vector3(moveVector.X * Speed.StrafeSpeed, moveVector.Y, moveVector.Z * Speed.ForwardSpeed) * deltaTime;
+            var newEntityPosition = currentEntityPosition + new Vector3(_moveVector.X * Speed.StrafeSpeed, _moveVector.Y, _moveVector.Z * Speed.ForwardSpeed) * deltaTime;
 
             if (newEntityPosition.Z > 3)
             {
                 newEntityPosition.Z = 3;
             }
-            else if (newEntityPosition.Z < 3 - GameConfiguration.FieldRestrictions.Y)
+            else if (newEntityPosition.Z < 3 - _gameConfiguration.FieldRestrictions.Y)
             {
-                newEntityPosition.Z = 3 - GameConfiguration.FieldRestrictions.Y;
+                newEntityPosition.Z = 3 - _gameConfiguration.FieldRestrictions.Y;
             }
 
-            if (newEntityPosition.X > GameConfiguration.FieldRestrictions.X)
+            if (newEntityPosition.X > _gameConfiguration.FieldRestrictions.X)
             {
-                newEntityPosition.X = GameConfiguration.FieldRestrictions.X;
+                newEntityPosition.X = _gameConfiguration.FieldRestrictions.X;
             }
-            else if (newEntityPosition.X < -GameConfiguration.FieldRestrictions.X)
+            else if (newEntityPosition.X < -_gameConfiguration.FieldRestrictions.X)
             {
-                newEntityPosition.X = -GameConfiguration.FieldRestrictions.X;
+                newEntityPosition.X = -_gameConfiguration.FieldRestrictions.X;
             }
 
             //DebugText.Print("move vector: " + moveVector.ToString(), new Int2(50, 250));
@@ -114,7 +115,7 @@ namespace StarInterceptor.Controllers
 
         private void UpdateEntityVelocity(float deltaTime)
         {
-            var velocity = new Vector3(moveVector.X * Speed.StrafeSpeed, moveVector.Y, moveVector.Z * Speed.ForwardSpeed) * deltaTime;
+            var velocity = new Vector3(_moveVector.X * Speed.StrafeSpeed, _moveVector.Y, _moveVector.Z * Speed.ForwardSpeed) * deltaTime;
 /*            if (Entity.Transform.Position.Z > 3 && velocity.Z > 0)
             {
                 velocity.Z = 0f;
@@ -133,16 +134,16 @@ namespace StarInterceptor.Controllers
                 velocity.X = 0f;
             }*/
 
-            characterComponent.SetVelocity(velocity);
+            _characterComponent.SetVelocity(velocity);
         }
 
         private void CalculateMoveVector(float directionX, float directionY)
         {
-            moveVector += new Vector3(directionX, 0.0f, directionY);
-            if (moveVector.X < -1.0f) { moveVector.X = -1f; }
-            if (moveVector.X > 1.0f) { moveVector.X = 1f; }
-            if (moveVector.Z < -1.0f) { moveVector.Z = -1f; }
-            if (moveVector.Z > 1.0f) { moveVector.Z = 1f; }
+            _moveVector += new Vector3(directionX, 0.0f, directionY);
+            if (_moveVector.X < -1.0f) { _moveVector.X = -1f; }
+            if (_moveVector.X > 1.0f) { _moveVector.X = 1f; }
+            if (_moveVector.Z < -1.0f) { _moveVector.Z = -1f; }
+            if (_moveVector.Z > 1.0f) { _moveVector.Z = 1f; }
         }
 
         private void ReadInputDirections(ref float directionX, ref float directionY)

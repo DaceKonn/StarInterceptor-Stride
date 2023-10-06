@@ -63,12 +63,3 @@ Hierarchy:
                             3ae977ad09923ae5017ffddd396606fc: !CapsuleColliderShapeDesc
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    8735945d453429d78f90cd3b13dd9a26: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
-                        Id: 16fff1b9-eac1-4106-bc9e-9b511757eadd
-                        Speed: -4.0
-                    0db6a9a8ec26213c5d518b4c59a020ca: !StarInterceptor.Gameplay.BulletCollisionHandler,StarInterceptor
-                        Id: b27631c8-5225-4b0e-baff-1e9f75210b91
-                        Trigger: ref!! 038b6701-cd8f-4dcf-a4f5-1e5b1b19efd1
-                    c47d5945543539bf09ec1f0173c1b631: !StarInterceptor.Gameplay.Trigger,StarInterceptor
-                        Id: 038b6701-cd8f-4dcf-a4f5-1e5b1b19efd1
-                        TriggerCondition: StartOnly

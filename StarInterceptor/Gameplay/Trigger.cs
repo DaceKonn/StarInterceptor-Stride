@@ -30,6 +30,7 @@ namespace StarInterceptor.Gameplay
         StartAndEnd,
     }
 
+    [ComponentCategory("CollisionHelpers")]
     public class Trigger : AsyncScript
     {
         [Display("Condition")]

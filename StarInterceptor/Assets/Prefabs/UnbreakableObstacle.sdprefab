@@ -43,12 +43,6 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    f4a39a56f02bf894dd8f22db23657ff1: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
-                        Id: 33957962-27f0-4ffc-acf5-f15ef11ced16
-                        Speed: 0.4
-                    cc05e9d53c7d9b0016c5286777eb1b77: !StarInterceptor.Gameplay.Trigger,StarInterceptor
-                        Id: 88692d0e-83e3-4ccd-a1e8-a43f042e3200
-                        TriggerCondition: StartOnly
         -   Entity:
                 Id: b585919d-1da0-4111-8377-88fd55fa37ac
                 Name: Cube_2

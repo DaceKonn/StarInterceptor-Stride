@@ -42,12 +42,3 @@ Hierarchy:
                             097f2b3f89bebc7527675d6db1c15818: !SphereColliderShapeDesc
                                 Is2D: false
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                    66babfa92e2da440bb8f872a394ea793: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
-                        Id: bcaf8c80-320f-43f7-b07b-fb348205c132
-                        Speed: 0.4
-                    88e4c37942084ea133599383721d01b1: !StarInterceptor.Gameplay.Trigger,StarInterceptor
-                        Id: 06288fb6-e8da-4bd1-9962-d695a67517c9
-                        TriggerCondition: StartOnly
-                    cd554c491444e5239437acf37473cfa9: !StarInterceptor.Gameplay.ObstacleCollisionHandler,StarInterceptor
-                        Id: d3f9fdc4-b382-435f-aab4-ffbc54674dff
-                        Trigger: ref!! 06288fb6-e8da-4bd1-9962-d695a67517c9

@@ -6,6 +6,7 @@ using System;
 
 namespace StarInterceptor.Gameplay
 {
+    [ComponentCategory("Spawns")]
     public class SpawnerScript : SyncScript
     {
         public Boolean Enabled { get; set; }
@@ -13,10 +14,10 @@ namespace StarInterceptor.Gameplay
         public Prefab SpawnPrefab;
         public float TimerDelay = 1.5f;
 
-        private float Timer = 0.0f;
-        private Random Random = new Random();
+        private float _timer = 0.0f;
+        private Random _random = new Random();
         // Declared public member fields and properties will show in the game studio
-        GameConfiguration GameConfiguration;
+        GameConfiguration _gameConfiguration;
 
 
         public override void Start()
@@ -26,7 +27,7 @@ namespace StarInterceptor.Gameplay
                 Log.Error("Spawn can't be null!");
             }
 
-            GameConfiguration = Services.GetService<IGameSettingsService>()?.Settings.Configurations.Get<GameConfiguration>() ?? new GameConfiguration();
+            _gameConfiguration = Services.GetService<IGameSettingsService>()?.Settings.Configurations.Get<GameConfiguration>() ?? new GameConfiguration();
             // Initialization of the script.
         }
 
@@ -40,17 +41,17 @@ namespace StarInterceptor.Gameplay
         {
             //DebugText.Print("Spawns: " + Entity.GetChildren().Count(), new Int2(800, 50));
 
-            if (Timer > 0.0f)
+            if (_timer > 0.0f)
             {
-                Timer -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                _timer -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
                 return;
             }
 
-            float randomX = Random.Next(-GameConfiguration.FieldRestrictions.X * 100 + 50, GameConfiguration.FieldRestrictions.X * 100 + 50) / 100f;
+            float randomX = _random.Next(-_gameConfiguration.FieldRestrictions.X * 100 + 50, _gameConfiguration.FieldRestrictions.X * 100 + 50) / 100f;
             var entity = SpawnPrefab.Instantiate()[0];
             entity.Transform.Position = new Vector3(randomX, 0.5f, 0);
             Entity.AddChild(entity);
-            Timer = TimerDelay - Random.Next(0, 12) / 10f;
+            _timer = TimerDelay - _random.Next(0, 12) / 10f;
         }
     }
 }

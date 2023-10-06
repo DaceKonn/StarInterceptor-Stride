@@ -151,16 +151,25 @@ Hierarchy:
                         ColliderShapes:
                             018289c78ff8fbc8953ad2abc2a5c94c: !ColliderShapeAssetDesc
                                 Shape: 0b951c54-d569-49da-8d37-1def459e4604:ColliderHull
-                    711e6897800418512c17781eb7bfe48d: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
-                        Id: db698786-86e0-4860-8e4c-d7f08381f0c1
+                    d1f5718123b0cd98cacbe7381795a024: !StarInterceptor.Gameplay.ShipState,StarInterceptor
+                        Id: 888810cb-9e83-4dca-86ea-c369dddb3038
+                        Weapons:
+                            2e7ab06a4fc679d4958eb897be3411db:
+                                Weapon: !StarInterceptor.Gameplay.Weapons.Laser,StarInterceptor
+                                    Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
+                                    BaseDelay: 0.2
+                                Enabled: true
+                    0c60407fc484372978cd774fb25fa37e: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
+                        Id: 55f3c96b-6cd3-4362-893b-6fe0d641880d
                         Enabled: true
                         Speed: {StrafeSpeed: 200.0, ForwardSpeed: 200.0}
                         MouseSensitivity: 10.0
-                    8d31bbd3c382b9405d5767ac87673510: !StarInterceptor.Controllers.ShootingController,StarInterceptor
-                        Id: 9e0a74e7-6f91-4556-a867-1e8fd0d52f25
+                    8824be57bc058146d8a7ea5e1e4b9cac: !StarInterceptor.Controllers.ShootingController,StarInterceptor
+                        Id: aef359c1-f4e8-4e7c-86b3-ab21b35b3bfc
                         TimerDelay: 0.2
                         Enabled: true
-                        Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/Bullet
+                        Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
+                        ShipState: null
         -   Entity:
                 Id: cdf5ad65-c159-4719-91d9-935765537538
                 Name: Spot light

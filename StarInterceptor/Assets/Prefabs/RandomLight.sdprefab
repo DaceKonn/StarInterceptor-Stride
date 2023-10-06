@@ -26,6 +26,3 @@ Hierarchy:
                                 Size: Small
                                 BiasParameters: {}
                         Intensity: 8.0
-                    2e6737ff231df2eed5a73f65e94f5488: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
-                        Id: a1396652-f8f5-493e-9e91-4c85b7410033
-                        Speed: 3.0

@@ -7,11 +7,11 @@ namespace StarInterceptor.Gameplay
 {
     public class ObstacleCollisionHandler : AbstractSyncCollisionHandler
     {
-        protected override Func<Task> cleanupTask(Entity collidedEntity)
+        protected override Func<Task> CleanupTask(Entity collidedEntity)
         {
             if (collidedEntity != null && collidedEntity.Name == "Spaceship")
             {
-                GameScores.Hull--;
+                _gameScores.Hull--;
             }
 
             return async () =>

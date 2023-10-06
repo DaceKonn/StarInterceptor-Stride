@@ -13,6 +13,7 @@ namespace StarInterceptor.Controllers
     /// The entity can be moved using W, A, S, D, Q and E, arrow keys, a gamepad's left stick or dragging/scaling using multi-touch.
     /// Rotation is achieved using the Numpad, the mouse while holding the right mouse button, a gamepad's right stick, or dragging using single-touch.
     /// </remarks>
+    [ComponentCategory("Controllers")]
     public class BasicCameraController : SyncScript
     {
 

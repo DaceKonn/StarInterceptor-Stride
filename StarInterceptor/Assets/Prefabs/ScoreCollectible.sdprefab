@@ -22,9 +22,6 @@ Hierarchy:
                         Model: da6e165e-f27a-4486-945e-53c84c36462d:Models/Torus
                         Materials:
                             d4b48dfcd9db2083733736144af52ead~0: 90fd7c6e-1245-43e8-8c63-019fb942d3bb:Materials/CollectibleMaterial
-                    d9cdf2ab08c176b7021d94c5a0e5b284: !StarInterceptor.Gameplay.Trigger,StarInterceptor
-                        Id: 0232f8c4-7087-4038-916b-3788b0ae1036
-                        TriggerCondition: StartOnly
                     b49f6b20b0850d0cd2790718f237bbd1: !RigidbodyComponent
                         Id: e5a836d3-8b22-45f2-b0a3-191a4442721b
                         CollisionGroup: CustomFilter2
@@ -48,13 +45,6 @@ Hierarchy:
                                 Height: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    368acafb7b199b2bbe9639cebce7cb84: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
-                        Id: 58713fdb-4142-4a5f-a95d-180ed61f0488
-                        Speed: 2.0
-                    e289847d4976c173df6592a061205fe3: !StarInterceptor.Gameplay.CollectibleCollisionHandler,StarInterceptor
-                        Id: 6ae1295b-dd5a-49db-8e5d-51b54686bc45
-                        Trigger: ref!! 0232f8c4-7087-4038-916b-3788b0ae1036
-                        ScoreValue: 10
         -   Entity:
                 Id: 743582b6-83d2-4dea-a973-b68286fbe798
                 Name: Point light

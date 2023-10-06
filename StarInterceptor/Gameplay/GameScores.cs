@@ -16,18 +16,18 @@ namespace StarInterceptor.Gameplay
 
         [DataMemberIgnore]
         public int Hull { get; set; }
-        private UIPage UIPage { get; set; }
+        private UIPage _uiPage { get; set; }
 
-        private TextBlock ScoreBox;
-        private TextBlock HullBox;
-        private TextBlock GameOverBox;
+        private TextBlock _scoreBox;
+        private TextBlock _hullBox;
+        private TextBlock _gameOverBox;
 
         public override void Start()
         {
-            UIPage = Entity.Components.Get<UIComponent>().Page;
-            ScoreBox = UIPage.RootElement.FindVisualChildOfType<TextBlock>("ScoreValueText");
-            HullBox = UIPage.RootElement.FindVisualChildOfType<TextBlock>("HullValueText");
-            GameOverBox = UIPage.RootElement.FindVisualChildOfType<TextBlock>("GameOver");
+            _uiPage = Entity.Components.Get<UIComponent>().Page;
+            _scoreBox = _uiPage.RootElement.FindVisualChildOfType<TextBlock>("ScoreValueText");
+            _hullBox = _uiPage.RootElement.FindVisualChildOfType<TextBlock>("HullValueText");
+            _gameOverBox = _uiPage.RootElement.FindVisualChildOfType<TextBlock>("GameOver");
             Score = BeginingScore;
             Hull = BeginingHull;
             // Initialization of the script.
@@ -35,12 +35,12 @@ namespace StarInterceptor.Gameplay
 
         public override void Update()
         {
-            ScoreBox.Text = Score.ToString();
-            HullBox.Text = Hull.ToString();
+            _scoreBox.Text = Score.ToString();
+            _hullBox.Text = Hull.ToString();
 
             if (Hull < 0)
             {
-                GameOverBox.Visibility = Visibility.Visible;
+                _gameOverBox.Visibility = Visibility.Visible;
             }
             // Do stuff every new frame
         }

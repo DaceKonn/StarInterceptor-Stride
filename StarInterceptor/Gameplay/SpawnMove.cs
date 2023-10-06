@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace StarInterceptor.Gameplay
 {
+    [ComponentCategory("Spawns")]
     public class SpawnMove : SyncScript
     {
         // Declared public member fields and properties will show in the game studio
