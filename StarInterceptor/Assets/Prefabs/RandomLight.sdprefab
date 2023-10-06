@@ -1,0 +1,31 @@
+!PrefabAsset
+Id: e4668674-2d48-4a6c-ada8-2a618763be15
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! ba986ba6-bbee-4dda-9d6a-e7f4a2a00243
+    Parts:
+        -   Entity:
+                Id: ba986ba6-bbee-4dda-9d6a-e7f4a2a00243
+                Name: Point light
+                Components:
+                    8467b76e1935e58506438a1c1fca9000: !TransformComponent
+                        Id: b06c41cc-1dfe-4992-a65a-c7be1010e680
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9380e24c2df93f04cf1abf0f7ef94669: !LightComponent
+                        Id: 986fe1dd-d6b7-4be0-af97-ead38f5962e7
+                        Type: !LightPoint
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 0.9097656, B: 0.34375}
+                            Radius: 5.0
+                            Shadow:
+                                Size: Small
+                                BiasParameters: {}
+                        Intensity: 8.0
+                    2e6737ff231df2eed5a73f65e94f5488: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
+                        Id: a1396652-f8f5-493e-9e91-4c85b7410033
+                        Speed: 3.0

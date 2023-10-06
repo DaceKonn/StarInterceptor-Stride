@@ -1,0 +1,76 @@
+!PrefabAsset
+Id: bbd91b67-be96-4e88-b322-f944adeeab05
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 172a8d52-98c1-430c-b9da-a6ee7ff3eded
+    Parts:
+        -   Entity:
+                Id: 172a8d52-98c1-430c-b9da-a6ee7ff3eded
+                Name: Torus
+                Components:
+                    2a2f4531ec64f2d7c71fdefcc20a9b26: !TransformComponent
+                        Id: d73502f3-e822-4bd3-9a9c-28a9a958ef37
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.27390307, Y: 0.27390307, Z: 0.27390307}
+                        Children:
+                            a998b8ef4516c8a21b378b466c02c328: ref!! e1b8977d-e368-41fa-9c55-aedd8169dc3a
+                    e6bb1c00b2f07b9cc29f8fd0d8e1b460: !ModelComponent
+                        Id: aef28a2d-71c2-44c6-b32e-989e6e757bd5
+                        Model: da6e165e-f27a-4486-945e-53c84c36462d:Models/Torus
+                        Materials:
+                            d4b48dfcd9db2083733736144af52ead~0: 90fd7c6e-1245-43e8-8c63-019fb942d3bb:Materials/CollectibleMaterial
+                    d9cdf2ab08c176b7021d94c5a0e5b284: !StarInterceptor.Gameplay.Trigger,StarInterceptor
+                        Id: 0232f8c4-7087-4038-916b-3788b0ae1036
+                        TriggerCondition: StartOnly
+                    b49f6b20b0850d0cd2790718f237bbd1: !RigidbodyComponent
+                        Id: e5a836d3-8b22-45f2-b0a3-191a4442721b
+                        CollisionGroup: CustomFilter2
+                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c5761d2b7d80c11aa8598f49007d0729: !CylinderColliderShapeDesc
+                                Height: 0.3
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    368acafb7b199b2bbe9639cebce7cb84: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
+                        Id: 58713fdb-4142-4a5f-a95d-180ed61f0488
+                        Speed: 2.0
+                    e289847d4976c173df6592a061205fe3: !StarInterceptor.Gameplay.CollectibleCollisionHandler,StarInterceptor
+                        Id: 6ae1295b-dd5a-49db-8e5d-51b54686bc45
+                        Trigger: ref!! 0232f8c4-7087-4038-916b-3788b0ae1036
+                        ScoreValue: 10
+        -   Entity:
+                Id: 743582b6-83d2-4dea-a973-b68286fbe798
+                Name: Point light
+                Components:
+                    52d8e4898f4103f03849b0284e3f0c34: !TransformComponent
+                        Id: e1b8977d-e368-41fa-9c55-aedd8169dc3a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dab8779ee96f79460ae26732e5c3c7f0: !LightComponent
+                        Id: 701f9469-631d-4dbc-9e9c-5f8a712559db
+                        Type: !LightPoint
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.991875, G: 1.0, B: 0.35000002}
+                            Shadow:
+                                Size: Small
+                                BiasParameters: {}
+                        Intensity: 0.1

@@ -1,0 +1,425 @@
+!SceneAsset
+Id: a7be5e6f-8e00-42cb-ae3d-c4c45e5bf80a
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds:
+    - fcdac2ea-a4a1-433b-b5d9-77a6146d3765
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! e2734343-535d-4122-b483-e333b0de8b0a
+        - ref!! cc370c56-7218-48cc-9d2e-06997d3ae234
+        - ref!! 1bc6056b-335d-4e01-9a91-7bc54110d768
+        - ref!! 336bb162-2e98-4ed0-8e93-4f7947029181
+        - ref!! 94109e3e-018a-4113-a614-fb9ed6024ad5
+        - ref!! 1577aba7-f057-46dc-8a28-56b223db16b9
+        - ref!! 49162a98-7d42-4bcb-a250-1277277b74de
+        - ref!! 219ce6df-b31e-4661-9545-8286d780ddab
+        - ref!! acae1336-b4c9-4670-9f3d-dc96527ec539
+        - ref!! 2def23a2-8cdb-4c74-abc9-5e7ecd4b75a7
+        - ref!! 69aa87be-9bec-4fd0-8c9e-34c62d66c9e8
+    Parts:
+        -   Entity:
+                Id: 1577aba7-f057-46dc-8a28-56b223db16b9
+                Name: SmallObstacleSpawner
+                Components:
+                    a82333f5b333c45374d793e402cb4e20: !TransformComponent
+                        Id: 2673e7d6-ebff-4fb3-9a1d-86a199c00e90
+                        Position: {X: 0.0, Y: 0.0, Z: -8.215}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d6734b02abe1dd4eac51d7ffcf551bab: !StarInterceptor.Gameplay.SpawnerScript,StarInterceptor
+                        Id: f72091ea-f545-44f5-ac0a-a0be59302197
+                        SpawnPrefab: 65c17920-e9fa-4225-96c8-dcb8a6698d64:Prefabs/SmallObstacle
+                        TimerDelay: 1.5
+                        Enabled: true
+        -   Folder: null
+            Entity:
+                Id: 1bc6056b-335d-4e01-9a91-7bc54110d768
+                Name: MainGameCamera
+                Components:
+                    06b13818333038bd6cbc9cc00fc4e173: !TransformComponent
+                        Id: 57368c42-bfd4-48b4-9269-912afd45a902
+                        Position: {X: 0.0, Y: 10.0, Z: 0.0}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0f3bd7dcdb1252169c71cd1a289477c0: !CameraComponent
+                        Id: cec53fa2-37be-4c17-93ba-0f3f459473a3
+                        Name: MainGameCamera
+                        Projection: Perspective
+                        Slot: 94847ee4-0893-4236-97e0-582a6b58bfef
+        -   Folder: null
+            Entity:
+                Id: 219ce6df-b31e-4661-9545-8286d780ddab
+                Name: CollectibleSpawner
+                Components:
+                    a82333f5b333c45374d793e402cb4e20: !TransformComponent
+                        Id: 2ef7f26a-019e-406d-a4b6-1ee888987d01
+                        Position: {X: 0.0, Y: 0.0, Z: -8.215}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d6734b02abe1dd4eac51d7ffcf551bab: !StarInterceptor.Gameplay.SpawnerScript,StarInterceptor
+                        Id: e5a8cdbe-84d6-43e3-98a2-d80f9e3427ec
+                        SpawnPrefab: bbd91b67-be96-4e88-b322-f944adeeab05:Prefabs/ScoreCollectible
+                        TimerDelay: 4.0
+                        Enabled: true
+        -   Entity:
+                Id: 2def23a2-8cdb-4c74-abc9-5e7ecd4b75a7
+                Name: RandomLightSpawner
+                Components:
+                    1bc4b62aa870e00ee437f74a89403dac: !TransformComponent
+                        Id: cbe7d9e8-5387-44d4-aecb-69a7a30cb7f6
+                        Position: {X: 0.0, Y: 2.0, Z: -7.852137}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d114472f029c74ee4db2a37cb8b34ceb: !StarInterceptor.Gameplay.SpawnerScript,StarInterceptor
+                        Id: 1128ed66-f675-4bfc-b292-1110a935bb0e
+                        SpawnPrefab: e4668674-2d48-4a6c-ada8-2a618763be15:Prefabs/RandomLight
+                        TimerDelay: 3.0
+                        Enabled: false
+        -   Entity:
+                Id: 336bb162-2e98-4ed0-8e93-4f7947029181
+                Name: Directional light
+                Components:
+                    831801b441fa0f16258e94f4ab719710: !TransformComponent
+                        Id: b14f1448-52d9-4d78-88c1-5b875652dc97
+                        Position: {X: 3.3014264, Y: 2.0, Z: -0.7528655}
+                        Rotation: {X: -0.25019598, Y: -0.802148, Z: -0.5175885, W: -0.16143979}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f595f1f9223b8c248279c09705b4ca37: !LightComponent
+                        Id: eadf90c7-4371-48e9-8aef-a354994a6dd6
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 0.9409375, B: 0.6625}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 0.2
+        -   Folder: null
+            Entity:
+                Id: 49162a98-7d42-4bcb-a250-1277277b74de
+                Name: SmallObstacleSpawner
+                Components:
+                    a82333f5b333c45374d793e402cb4e20: !TransformComponent
+                        Id: 8c2fe378-6d4e-4a70-9307-94266d4596ee
+                        Position: {X: 0.0, Y: 0.0, Z: -8.215}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d6734b02abe1dd4eac51d7ffcf551bab: !StarInterceptor.Gameplay.SpawnerScript,StarInterceptor
+                        Id: 531aeac7-185b-47a8-b14c-33c42b4259f5
+                        SpawnPrefab: 7172e249-9f55-4b34-8ade-7ccec558ec53:Prefabs/UnbreakableObstacle
+                        TimerDelay: 4.0
+                        Enabled: true
+        -   Entity:
+                Id: 4b64a727-46f3-4484-a6bc-29367b33e2cc
+                Name: Simple particle system
+                Components:
+                    0b70bd47766b241972c4b2bed4906cc4: !TransformComponent
+                        Id: 8d2f9b6d-b1fe-4bc2-a98d-9a5a67a6016f
+                        Position: {X: 0.0, Y: -4.5273307E-08, Z: 0.17938188}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.19904065, Y: 0.19904065, Z: 0.19904065}
+                        Children: {}
+                    6954546ea816faef51e0f67e12046417: !ParticleSystemComponent
+                        Id: 9599f5cf-d064-4fff-97a4-dc3538167191
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Pause
+                        Color: {R: 0.003921569, G: 0.92156863, B: 1.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                fab5a405dab53bfd33f533cbb61a6d2f:
+                                    ParticleLifetime: {X: 1.0, Y: 2.0}
+                                    ShapeBuilder: !ShapeBuilderHexagon
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        bd17391bdc00ecec68a096e7543136ee: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 300.0
+                                    Initializers:
+                                        d8cae02532c4ca1909a0896b696ee0c2: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.05, Y: 0.1}
+                                        4e19b79fbf5b0c86f96bbe84be7c7dfd: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: 1.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
+                                        5feb0f706d0dae24d8960f3f5b29b1cf: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -0.2, Y: 8.0, Z: -0.5}
+                                            VelocityMax: {X: 0.2, Y: 200.0, Z: 0.5}
+                                    Updaters:
+                                        70d60350667a6acaa24eda9cad83cb3b: !UpdaterForceField
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: true
+                                            FieldShape: null
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: true
+                                            DisplayParticleScaleUniform: false
+                                            FieldFalloff:
+                                                StrengthInside: 1.0
+                                                FalloffStart: 0.1
+                                                StrengthOutside: 1.0
+                                                FalloffEnd: 0.9
+                                            EnergyConservation: 1.0
+                                            ForceDirected: 0.0
+                                            ForceVortex: 0.0
+                                            ForceRepulsive: 0.0
+                                            ForceFixed: {X: 0.0, Y: 0.0, Z: 1.0}
+            Base:
+                BasePartAsset: aa4ea6f4-11d1-4fd1-acdd-d5452f07f2f1:Prefabs/Spaceship
+                BasePartId: 049f48c9-c79a-491d-98c7-1a42760189c3
+                InstanceId: 7ab3b975-0eaa-4b5e-9434-b2682f63cc0c
+        -   Folder: Boundrary
+            Entity:
+                Id: 69aa87be-9bec-4fd0-8c9e-34c62d66c9e8
+                Name: Entity
+                Components:
+                    e5577f300ee83c41eef9cc50a880381c: !TransformComponent
+                        Id: 8f4aca1e-bda3-4d49-b89f-751ffc55f1ea
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b653b7f824ff7679da223fea1ce8c50c: !StaticColliderComponent
+                        Id: f0fbe4a4-4891-4226-9da6-405b9d69ae67
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            e8ca2613ed79c4c66a866e1260beb640: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+                            362aa3822af238ffd4ec72e9a59df52b: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 1.0, Y: 0.0, Z: 0.0}
+                                Offset: -6.0
+                            4a1903600f0200458901ca5d25e09bbb: !StaticPlaneColliderShapeDesc
+                                Normal: {X: -1.0, Y: 0.0, Z: 0.0}
+                                Offset: -6.0
+                            41ee2227804e1c21810e623f1e4b9f08: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: -1.0
+                            7f520994ddf7303614417b6fcf1a5b96: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: -1.0}
+                                Offset: -3.0
+        -   Folder: null
+            Entity:
+                Id: 94109e3e-018a-4113-a614-fb9ed6024ad5
+                Name: Directional light
+                Components:
+                    831801b441fa0f16258e94f4ab719710: !TransformComponent
+                        Id: 79299797-3845-448b-b43f-b097fcd273a9
+                        Position: {X: 2.644196, Y: 2.0, Z: -0.7528655}
+                        Rotation: {X: 0.4668674, Y: 0.021128401, Z: -0.33545598, W: -0.81795955}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f595f1f9223b8c248279c09705b4ca37: !LightComponent
+                        Id: 4f18fb99-22f2-4474-85a1-bbcdb098e719
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.3875, G: 0.42578125, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 0.2
+        -   Entity:
+                Id: 95236b38-41f1-4015-89cf-0cdff3d180d5
+                Name: Spaceship
+                Components:
+                    a254b3df1453b767f6c5d75a62ba0a26: !TransformComponent
+                        Id: 1edb473a-61da-479a-9e13-17109b39f059
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            91fb1027b93ab50df069d4aac3b2e7de: ref!! 8d2f9b6d-b1fe-4bc2-a98d-9a5a67a6016f
+                            6a47c89901a2ead14893321ec2d2261a: ref!! ebe3d3bb-7a66-4aaa-ad82-112b0c7869da
+                    74dc1bf66e925713a22c8ce5148a39bd: !ModelComponent
+                        Id: c06c38b0-827d-4bb5-9d09-c139f92d893c
+                        Model: 059ce22a-455b-4b2e-a5ac-626976a4bd1b:Models/Spaceship
+                        Materials: {}
+                    c6b1854d4e5992218e08ce61e43934f3: !CharacterComponent
+                        Id: fa6cdd84-0b1c-42ff-8fe9-7ca96346558e
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        ColliderShapes:
+                            018289c78ff8fbc8953ad2abc2a5c94c: !ColliderShapeAssetDesc
+                                Shape: 0b951c54-d569-49da-8d37-1def459e4604:ColliderHull
+                    711e6897800418512c17781eb7bfe48d: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
+                        Id: cc7cccee-50c8-41b7-8386-6b458b1c1213
+                        Enabled: true
+                        Speed: {StrafeSpeed: 200.0, ForwardSpeed: 200.0}
+                        MouseSensitivity: 10.0
+                    8d31bbd3c382b9405d5767ac87673510: !StarInterceptor.Controllers.ShootingController,StarInterceptor
+                        Id: 80b318c5-8c92-42aa-a6d1-4dc096ed6a0a
+                        TimerDelay: 0.2
+                        Enabled: true
+                        Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/Bullet
+            Base:
+                BasePartAsset: aa4ea6f4-11d1-4fd1-acdd-d5452f07f2f1:Prefabs/Spaceship
+                BasePartId: 6eccabac-762a-438e-af56-15b2b80802c7
+                InstanceId: 7ab3b975-0eaa-4b5e-9434-b2682f63cc0c
+        -   Entity:
+                Id: acae1336-b4c9-4670-9f3d-dc96527ec539
+                Name: Spaceship
+                Components:
+                    ae657c14d30a07d47980b86856c346c2: !TransformComponent
+                        Id: 2406a73d-233e-44f9-b6a1-3a8b28270df5
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            7a5594b00117561b40d7e46846de87ad: ref!! 1edb473a-61da-479a-9e13-17109b39f059
+        -   Entity:
+                Id: cc370c56-7218-48cc-9d2e-06997d3ae234
+                Name: LevelUI
+                Components:
+                    dcb3919890afb2885c713cd027392785: !TransformComponent
+                        Id: b107a37c-89c8-45f1-9a04-5e9563900e8b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0b3e0d6f08cad6b7134d6ef4bbb6b18d: !UIComponent
+                        Id: 503afb46-561d-462f-b9e4-a5fdc976ec77
+                        Page: 58a6d5d9-d650-4dfe-9a1b-8c6aa9efd285:LevelUI
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 1.0, Z: 1.0}
+                    850bbb27d717b20eb258bcd62454e940: !StarInterceptor.Gameplay.GameScores,StarInterceptor
+                        Id: 3a87e024-0598-49e5-bcc2-0fa74a83c669
+                        BeginingScore: 0
+                        BeginingHull: 3
+        -   Entity:
+                Id: dadc3e98-24dc-4fb8-b429-0c21a30c7a29
+                Name: Spot light
+                Components:
+                    7e021e230f7f8bc4db0e20237b5c3e4f: !TransformComponent
+                        Id: ebe3d3bb-7a66-4aaa-ad82-112b0c7869da
+                        Position: {X: -2.6823756E-08, Y: 0.0, Z: 0.306828}
+                        Rotation: {X: -0.0, Y: -1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    86963ea913c5efb8bfd91123eaef9c95: !LightComponent
+                        Id: 33f1c49f-2666-4ebd-bb23-3d470ea84577
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.003921569, G: 0.92156863, B: 1.0}
+                            Range: 10.0
+                            AngleInner: 78.1
+                            AngleOuter: 43.0
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                Enabled: true
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 1000.0
+            Base:
+                BasePartAsset: aa4ea6f4-11d1-4fd1-acdd-d5452f07f2f1:Prefabs/Spaceship
+                BasePartId: cdf5ad65-c159-4719-91d9-935765537538
+                InstanceId: 7ab3b975-0eaa-4b5e-9434-b2682f63cc0c
+        -   Entity:
+                Id: e2734343-535d-4122-b483-e333b0de8b0a
+                Name: Background
+                Components:
+                    98ac353b80aa319f26d4e5462bd4673c: !TransformComponent
+                        Id: 3e6769a6-c961-414d-911f-103f2a0d2a7d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ccf95c5650efd16622f09d5ff2a566de: !BackgroundComponent
+                        Id: 70401144-a297-4682-9d75-66203533155b
+                        Texture: ef6bb55d-e45a-4bb7-8da5-de97730cb083:Textures/space_cables_cubemap
+                        Intensity: 0.0

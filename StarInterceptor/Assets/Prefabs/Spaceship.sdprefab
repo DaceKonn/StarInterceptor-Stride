@@ -1,0 +1,188 @@
+!PrefabAsset
+Id: aa4ea6f4-11d1-4fd1-acdd-d5452f07f2f1
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 6eccabac-762a-438e-af56-15b2b80802c7
+    Parts:
+        -   Entity:
+                Id: 049f48c9-c79a-491d-98c7-1a42760189c3
+                Name: Simple particle system
+                Components:
+                    0b70bd47766b241972c4b2bed4906cc4: !TransformComponent
+                        Id: 43cab342-bc2b-457b-bd2c-a8c37d4180b3
+                        Position: {X: 0.0, Y: -4.5273307E-08, Z: 0.17938188}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.19904065, Y: 0.19904065, Z: 0.19904065}
+                        Children: {}
+                    6954546ea816faef51e0f67e12046417: !ParticleSystemComponent
+                        Id: e09281bb-5ff3-4970-bb08-235f07f3a49f
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Pause
+                        Color: {R: 0.003921569, G: 0.92156863, B: 1.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                fab5a405dab53bfd33f533cbb61a6d2f:
+                                    ParticleLifetime: {X: 1.0, Y: 2.0}
+                                    ShapeBuilder: !ShapeBuilderHexagon
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        bd17391bdc00ecec68a096e7543136ee: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 300.0
+                                    Initializers:
+                                        d8cae02532c4ca1909a0896b696ee0c2: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.05, Y: 0.1}
+                                        4e19b79fbf5b0c86f96bbe84be7c7dfd: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -1.0, Y: 1.0, Z: -1.0}
+                                            PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
+                                        5feb0f706d0dae24d8960f3f5b29b1cf: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -0.2, Y: 8.0, Z: -0.5}
+                                            VelocityMax: {X: 0.2, Y: 200.0, Z: 0.5}
+                                    Updaters:
+                                        70d60350667a6acaa24eda9cad83cb3b: !UpdaterForceField
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: true
+                                            FieldShape: null
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: true
+                                            DisplayParticleScaleUniform: false
+                                            FieldFalloff:
+                                                StrengthInside: 1.0
+                                                FalloffStart: 0.1
+                                                StrengthOutside: 1.0
+                                                FalloffEnd: 0.9
+                                            EnergyConservation: 1.0
+                                            ForceDirected: 0.0
+                                            ForceVortex: 0.0
+                                            ForceRepulsive: 0.0
+                                            ForceFixed: {X: 0.0, Y: 0.0, Z: 1.0}
+        -   Entity:
+                Id: 6eccabac-762a-438e-af56-15b2b80802c7
+                Name: Spaceship
+                Components:
+                    a254b3df1453b767f6c5d75a62ba0a26: !TransformComponent
+                        Id: da2c87ce-fe65-4f60-89e1-744bb9835465
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            8d24e49fee478f5eda5dbe344b0a5864: ref!! 43cab342-bc2b-457b-bd2c-a8c37d4180b3
+                            6a47c89901a2ead14893321ec2d2261a: ref!! 8630cac6-9944-4002-b048-462c354e25fe
+                    74dc1bf66e925713a22c8ce5148a39bd: !ModelComponent
+                        Id: 97a9ad39-fec7-460c-8a72-b6e914e41926
+                        Model: 059ce22a-455b-4b2e-a5ac-626976a4bd1b:Models/Spaceship
+                        Materials: {}
+                    c6b1854d4e5992218e08ce61e43934f3: !CharacterComponent
+                        Id: 6266521c-5ca7-4139-a1e3-c30a391988a8
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        ColliderShapes:
+                            018289c78ff8fbc8953ad2abc2a5c94c: !ColliderShapeAssetDesc
+                                Shape: 0b951c54-d569-49da-8d37-1def459e4604:ColliderHull
+                    711e6897800418512c17781eb7bfe48d: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
+                        Id: db698786-86e0-4860-8e4c-d7f08381f0c1
+                        Enabled: true
+                        Speed: {StrafeSpeed: 200.0, ForwardSpeed: 200.0}
+                        MouseSensitivity: 10.0
+                    8d31bbd3c382b9405d5767ac87673510: !StarInterceptor.Controllers.ShootingController,StarInterceptor
+                        Id: 9e0a74e7-6f91-4556-a867-1e8fd0d52f25
+                        TimerDelay: 0.2
+                        Enabled: true
+                        Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/Bullet
+        -   Entity:
+                Id: cdf5ad65-c159-4719-91d9-935765537538
+                Name: Spot light
+                Components:
+                    7e021e230f7f8bc4db0e20237b5c3e4f: !TransformComponent
+                        Id: 8630cac6-9944-4002-b048-462c354e25fe
+                        Position: {X: -2.6823756E-08, Y: 0.0, Z: 0.306828}
+                        Rotation: {X: -0.0, Y: -1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    86963ea913c5efb8bfd91123eaef9c95: !LightComponent
+                        Id: f97fc721-8f91-45f0-af38-800f4fe0b5b2
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.003921569, G: 0.92156863, B: 1.0}
+                            Range: 10.0
+                            AngleInner: 78.1
+                            AngleOuter: 43.0
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                Enabled: true
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 1000.0

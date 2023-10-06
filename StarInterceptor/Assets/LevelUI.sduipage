@@ -1,0 +1,142 @@
+!UIPageAsset
+Id: 58a6d5d9-d650-4dfe-9a1b-8c6aa9efd285
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+Hierarchy:
+    RootParts:
+        - !Grid ref!! 077f77de-820d-486d-a997-49871a498096
+    Parts:
+        -   UIElement: !TextBlock
+                Id: 022b6668-70bc-49d0-81d1-3060f9e76d5b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 20.384113
+                Height: 28.333332
+                HorizontalAlignment: Left
+                Margin: {Left: 164.61589}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: ScoreValueText
+                Text: 0
+                Font: 618f961a-8be1-439e-987a-3290ecbce471:SpriteFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !Grid
+                Id: 077f77de-820d-486d-a997-49871a498096
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 1280.0
+                Height: 720.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    5bf9af911c6f0279d5f059f2b05070bd: !StackPanel ref!! c288b4d5-5d39-430a-b8dc-b87d129ffa6b
+                    e308466f54ac449746237a9e72da7b01: !TextBlock ref!! 9cb64839-2e55-4743-9b09-0569c6f5b80d
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !StackPanel
+                Id: 2380f794-daa9-4e6f-ab8c-278b2b857a45
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    6984b44839e2a67b3414d54370248bc9: !TextBlock ref!! 65b70ffe-f73f-4aa9-9a4c-02944cca6e13
+                    ad004cfccc32db1ca9a69b3cd011ae60: !TextBlock ref!! 022b6668-70bc-49d0-81d1-3060f9e76d5b
+                Orientation: Horizontal
+        -   UIElement: !TextBlock
+                Id: 250449c7-e0a0-45c4-853b-326394a4ecef
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 20.384113
+                Height: 28.333332
+                HorizontalAlignment: Left
+                Margin: {Left: 164.61589}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: HullValueText
+                Text: 0
+                Font: 618f961a-8be1-439e-987a-3290ecbce471:SpriteFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !TextBlock
+                Id: 65b70ffe-f73f-4aa9-9a4c-02944cca6e13
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 120.0
+                Height: 22.656252
+                HorizontalAlignment: Left
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Text: 'Score:'
+                Font: 618f961a-8be1-439e-987a-3290ecbce471:SpriteFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !TextBlock
+                Id: 9cb64839-2e55-4743-9b09-0569c6f5b80d
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
+                Width: 283.0
+                Height: 50.0
+                Margin: {Left: 499.0, Top: 332.0, Right: 498.0, Bottom: 338.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: GameOver
+                Text: GAME OVER
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 50.0
+                TextColor: {R: 255, G: 0, B: 0, A: 255}
+        -   UIElement: !StackPanel
+                Id: c288b4d5-5d39-430a-b8dc-b87d129ffa6b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 362.0
+                Height: 83.0
+                VerticalAlignment: Bottom
+                Margin: {Left: 420.0, Right: 498.0, Bottom: 14.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    10cc42ae3c8c729157e81d607dd8f0c0: !StackPanel ref!! d8d595a8-7fb3-493e-9d82-5f9d3ba009f6
+                    ecc72651bdfb0318c494655b3a045382: !StackPanel ref!! 2380f794-daa9-4e6f-ab8c-278b2b857a45
+        -   UIElement: !StackPanel
+                Id: d8d595a8-7fb3-493e-9d82-5f9d3ba009f6
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    c2759e6ae159429d7fd9741f7bc5797e: !TextBlock ref!! fac42b6a-a9ce-4a30-b425-96d4280a6221
+                    48ce50514a2019d90d43d75c5a3cfcc6: !TextBlock ref!! 250449c7-e0a0-45c4-853b-326394a4ecef
+                Orientation: Horizontal
+        -   UIElement: !TextBlock
+                Id: fac42b6a-a9ce-4a30-b425-96d4280a6221
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 120.0
+                Height: 22.656252
+                HorizontalAlignment: Left
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Text: 'Hull:'
+                Font: 618f961a-8be1-439e-987a-3290ecbce471:SpriteFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}

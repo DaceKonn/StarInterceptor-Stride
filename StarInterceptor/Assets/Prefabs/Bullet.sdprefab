@@ -1,0 +1,74 @@
+!PrefabAsset
+Id: cc1f03a0-96a0-4825-be1e-cbdad40079c2
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! f6e29d0e-9232-4b21-af1d-7447ac730bcf
+    Parts:
+        -   Entity:
+                Id: a73bf849-a94b-43a1-8d9a-f28dab1b8e5f
+                Name: Point light
+                Components:
+                    5a7193aaabc9e9180b0f206b137d90e7: !TransformComponent
+                        Id: 822186b1-6dc9-44a6-8cd2-8b4b480ea973
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1f273d481d9ba1c8d1260790d8344bc4: !LightComponent
+                        Id: 2c8efc1b-67f8-45cc-81b6-490d1eac2fb2
+                        Type: !LightPoint
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.37254903, G: 1.0, B: 0.7176471}
+                            Radius: 3.0
+                            Shadow:
+                                Size: Small
+                                BiasParameters: {}
+        -   Entity:
+                Id: f6e29d0e-9232-4b21-af1d-7447ac730bcf
+                Name: Capsule
+                Components:
+                    64d0188fd91e15bd75f88e046f45db14: !TransformComponent
+                        Id: abb41468-b214-476c-8d21-edf1807ca3f4
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.06133844, Y: 0.06133844, Z: 0.06133844}
+                        Children:
+                            e4d266a6b8ba68aeca224a59a6feb13c: ref!! 822186b1-6dc9-44a6-8cd2-8b4b480ea973
+                    a7766f406ead6bbad3f101416f51afe2: !ModelComponent
+                        Id: 6662e1fd-fb13-4928-8daa-41f2eaffe83f
+                        Model: 540d0c54-c248-4de5-ab61-b3c1d11de379:Models/Capsule
+                        Materials:
+                            c50da138d7aa4aa8623470357d20b629~0: e93686b3-f978-42d3-801b-6ac7f9af1915:Materials/ShipBullet
+                    d7a1b249c4f0de0d1434dd0b7da45d62: !RigidbodyComponent
+                        Id: 81e891c2-28db-47ff-89c7-54be50516973
+                        CollisionGroup: CustomFilter1
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3ae977ad09923ae5017ffddd396606fc: !CapsuleColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    8735945d453429d78f90cd3b13dd9a26: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
+                        Id: 16fff1b9-eac1-4106-bc9e-9b511757eadd
+                        Speed: -4.0
+                    0db6a9a8ec26213c5d518b4c59a020ca: !StarInterceptor.Gameplay.BulletCollisionHandler,StarInterceptor
+                        Id: b27631c8-5225-4b0e-baff-1e9f75210b91
+                        Trigger: ref!! 038b6701-cd8f-4dcf-a4f5-1e5b1b19efd1
+                    c47d5945543539bf09ec1f0173c1b631: !StarInterceptor.Gameplay.Trigger,StarInterceptor
+                        Id: 038b6701-cd8f-4dcf-a4f5-1e5b1b19efd1
+                        TriggerCondition: StartOnly

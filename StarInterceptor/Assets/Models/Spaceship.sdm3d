@@ -1,0 +1,23 @@
+!Model
+Id: 059ce22a-455b-4b2e-a5ac-626976a4bd1b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Spaceship.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    40379fc8b25c4510ce2e8af4fc894c71:
+        Name: Body
+        MaterialInstance:
+            Material: 0fe5feb6-ba88-474e-9656-20f05b74fb0f:Materials/Body
+    9875212d25c479252b90f234ab304913:
+        Name: Canopy
+        MaterialInstance:
+            Material: 0e841b87-b356-4dd4-85dc-460fe05a31ae:Materials/Canopy
+    1dd10587bbcabad45733c72efb43635c:
+        Name: Exhaust
+        MaterialInstance:
+            Material: dcdaf309-6c79-4813-826c-4840bf18a90c:Materials/Exhaust
+Modifiers: {}
+~SourceHashes:
+    28e323d1092441e081e1a2014fc561a7~../../Resources/Spaceship.fbx: 73f819ac95986f1ffbbc7ac93b812d2b

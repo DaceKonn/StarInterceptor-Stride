@@ -1,0 +1,7 @@
+!Texture
+Id: ef6bb55d-e45a-4bb7-8da5-de97730cb083
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/space_cables_cubemap.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

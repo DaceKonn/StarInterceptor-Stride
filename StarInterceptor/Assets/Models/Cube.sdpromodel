@@ -1,0 +1,12 @@
+!ProceduralModelAsset
+Id: 47f45b18-de42-4761-bfbe-44024ebb24f0
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: !CubeProceduralModel
+    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+    UvScale: {X: 1.0, Y: 1.0}
+    LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+    NumberOfTextureCoordinates: 10
+    MaterialInstance:
+        Material: 929bf90c-0593-44c6-ad87-86ebe444f822:Materials/SpaceIce

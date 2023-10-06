@@ -1,0 +1,65 @@
+!PrefabAsset
+Id: 7172e249-9f55-4b34-8ade-7ccec558ec53
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 911cbb83-7782-4c24-a10d-3a889a7c39d1
+    Parts:
+        -   Entity:
+                Id: 911cbb83-7782-4c24-a10d-3a889a7c39d1
+                Name: Cube
+                Components:
+                    98acd5b40e5b2071283991b1ba87597e: !TransformComponent
+                        Id: 92702524-501e-441d-b0fe-15e70f4d9bf7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ac4aa49e6cedbfb8b09c16e5086ff704: ref!! 2a732cd0-78e4-4138-99fd-0c5860ed2a88
+                    216c439272b06c8ae91b44778b2003bb: !ModelComponent
+                        Id: 060765b9-2e7f-415c-ade4-e35a9f2c2cb3
+                        Model: 47f45b18-de42-4761-bfbe-44024ebb24f0:Models/Cube
+                        Materials: {}
+                    8814888cddcd3903a8b47f29670e4672: !RigidbodyComponent
+                        Id: 544394ad-5dc2-401e-9920-479262016d3b
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            5eab0837314426eab62e18d1debf1448: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    f4a39a56f02bf894dd8f22db23657ff1: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
+                        Id: 33957962-27f0-4ffc-acf5-f15ef11ced16
+                        Speed: 0.4
+                    cc05e9d53c7d9b0016c5286777eb1b77: !StarInterceptor.Gameplay.Trigger,StarInterceptor
+                        Id: 88692d0e-83e3-4ccd-a1e8-a43f042e3200
+                        TriggerCondition: StartOnly
+        -   Entity:
+                Id: b585919d-1da0-4111-8377-88fd55fa37ac
+                Name: Cube_2
+                Components:
+                    aed0571b96b52f4777e3534c31467fd1: !TransformComponent
+                        Id: 2a732cd0-78e4-4138-99fd-0c5860ed2a88
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    282c61e424ee2f6ff607a3b6107ab671: !ModelComponent
+                        Id: c38e3fab-9ee9-4ab3-bfb1-55606b282037
+                        Model: 069ae02f-b785-4e70-9fd1-60d06641fe7d:Models/Cube_2
+                        Materials: {}

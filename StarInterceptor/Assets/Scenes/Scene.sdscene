@@ -1,0 +1,43 @@
+!SceneAsset
+Id: fcdac2ea-a4a1-433b-b5d9-77a6146d3765
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Parent: a7be5e6f-8e00-42cb-ae3d-c4c45e5bf80a:Scenes/MainScene
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 1b0cfb79-234c-4721-bd4f-3289c05f37ab
+        - ref!! c7bb52a6-fd27-41c9-867b-6fe31271eeb1
+    Parts:
+        -   Entity:
+                Id: 1b0cfb79-234c-4721-bd4f-3289c05f37ab
+                Name: Ground
+                Components:
+                    a0b512c7aa785f43e428a0bb189578b5: !TransformComponent
+                        Id: 7524b51a-bfec-4484-9d31-1ee112ee6f67
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    bf715ca2d544cf00252db470159923d8: !ModelComponent
+                        Id: eaafb219-2671-4bdb-927e-b8ea176cb726
+                        Model: e6560172-c594-4824-95e1-39364fc96588:Models/Ground
+                        Materials: {}
+        -   Entity:
+                Id: c7bb52a6-fd27-41c9-867b-6fe31271eeb1
+                Name: Skybox
+                Components:
+                    b7ba9e701caf32117df8643ac72c4e5e: !TransformComponent
+                        Id: 611d753d-85e5-4be3-9e57-bbddd0c524d5
+                        Position: {X: -3.4454625, Y: 2.0, Z: -2.2958205}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    732c3999da9350526a9b8581e0e3d35e: !BackgroundComponent
+                        Id: 7b0840be-d267-46f4-a346-cce5237452b3
+                        Texture: 8ac08828-66ac-49b6-bea7-26a06a9cd21f:Textures/Skybox texture
+                    20f3657aa8119db2146fee03288e5a4a: !LightComponent
+                        Id: a128ba03-1516-4711-8d00-0e326b41549a
+                        Type: !LightSkybox
+                            Skybox: 7b81939f-609f-48da-9283-8e4f338b6dd6:Skyboxes/Skybox

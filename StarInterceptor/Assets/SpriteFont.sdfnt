@@ -1,0 +1,18 @@
+!SpriteFont
+Id: 618f961a-8be1-439e-987a-3290ecbce471
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+FontSource: !SystemFontProvider
+    FontName: Lucida Console
+    Style: Regular
+FontType: !SignedDistanceFieldSpriteFontType
+    Size: 12.0
+    CharacterSet: null
+    CharacterRegions:
+        6fb25489b2e03699094fc7d28df25c2e:
+            Start: ' '
+            End: "\x7F"
+Spacing: 5.0
+LineSpacing: 5.0
+LineGapFactor: 5.0
+LineGapBaseLineFactor: 5.0
