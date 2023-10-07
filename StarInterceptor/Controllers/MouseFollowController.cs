@@ -36,7 +36,6 @@ namespace StarInterceptor.Controllers
 
             if (Input.HasMouse)
             {
-                MousetLocking();
 
                 if (Input.Mouse.IsPositionLocked)
                 {
@@ -177,18 +176,6 @@ namespace StarInterceptor.Controllers
             }
         }
 
-        private void MousetLocking()
-        {
-            if (Input.IsMouseButtonDown(MouseButton.Left))
-            {
-                Input.LockMousePosition(true);
-                Game.IsMouseVisible = false;
-            }
-            if (Input.IsKeyPressed(Keys.Escape))
-            {
-                Input.UnlockMousePosition();
-                Game.IsMouseVisible = true;
-            }
-        }
+        
     }
 }

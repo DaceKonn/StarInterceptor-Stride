@@ -13,6 +13,7 @@ using Stride.Core.Serialization;
 using Stride.Core.Annotations;
 using System.ComponentModel;
 using Stride.Core.Collections;
+using StarInterceptor.Core;
 
 namespace StarInterceptor.Gameplay
 {
@@ -33,6 +34,10 @@ namespace StarInterceptor.Gameplay
 
         public override void Update()
         {
+            if (Hull < 0)
+            {
+                Game.RemoveEntity(Entity);
+            }
             // Do stuff every new frame
         }
     }

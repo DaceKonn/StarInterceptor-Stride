@@ -18,6 +18,7 @@ Hierarchy:
         - ref!! acae1336-b4c9-4670-9f3d-dc96527ec539
         - ref!! 2def23a2-8cdb-4c74-abc9-5e7ecd4b75a7
         - ref!! 69aa87be-9bec-4fd0-8c9e-34c62d66c9e8
+        - ref!! 88160fcc-7a2c-41bd-87ab-5a85774ac17d
     Parts:
         -   Entity:
                 Id: 1577aba7-f057-46dc-8a28-56b223db16b9
@@ -281,6 +282,18 @@ Hierarchy:
                             7f520994ddf7303614417b6fcf1a5b96: !StaticPlaneColliderShapeDesc
                                 Normal: {X: 0.0, Y: 0.0, Z: -1.0}
                                 Offset: -3.0
+        -   Entity:
+                Id: 88160fcc-7a2c-41bd-87ab-5a85774ac17d
+                Name: MouseLocking
+                Components:
+                    580c021a00ae04650bd2844aa72bdcb2: !TransformComponent
+                        Id: 43a631d9-8e05-4e8c-820a-611ea1db3126
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b85a5eaaf02c60ac0e14ea78b08cfb59: !StarInterceptor.Controllers.MouseLockController,StarInterceptor
+                        Id: cbc95288-2ece-43dc-8a6e-e297aa868909
         -   Folder: null
             Entity:
                 Id: 94109e3e-018a-4113-a614-fb9ed6024ad5
