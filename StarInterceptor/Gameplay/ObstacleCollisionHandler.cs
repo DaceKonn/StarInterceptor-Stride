@@ -11,7 +11,7 @@ namespace StarInterceptor.Gameplay
         {
             if (collidedEntity != null && collidedEntity.Name == "Spaceship")
             {
-                _gameScores.Hull--;
+                ShipState.Hull--;
             }
 
             return async () =>

@@ -8,14 +8,15 @@ namespace StarInterceptor.Gameplay
     public class GameScores : SyncScript
     {
         public int BeginingScore { get; set; }
-        public int BeginingHull { get; set; }
+
+        public ShipState ShipState { get; set; }
 
         // Declared public member fields and properties will show in the game studio
         [DataMemberIgnore]
         public int Score { get; set; }
 
         [DataMemberIgnore]
-        public int Hull { get; set; }
+        //public int Hull { get; set; }
         private UIPage _uiPage { get; set; }
 
         private TextBlock _scoreBox;
@@ -29,16 +30,15 @@ namespace StarInterceptor.Gameplay
             _hullBox = _uiPage.RootElement.FindVisualChildOfType<TextBlock>("HullValueText");
             _gameOverBox = _uiPage.RootElement.FindVisualChildOfType<TextBlock>("GameOver");
             Score = BeginingScore;
-            Hull = BeginingHull;
             // Initialization of the script.
         }
 
         public override void Update()
         {
             _scoreBox.Text = Score.ToString();
-            _hullBox.Text = Hull.ToString();
+            _hullBox.Text = ShipState.Hull.ToString();
 
-            if (Hull < 0)
+            if (ShipState.Hull < 0)
             {
                 _gameOverBox.Visibility = Visibility.Visible;
             }

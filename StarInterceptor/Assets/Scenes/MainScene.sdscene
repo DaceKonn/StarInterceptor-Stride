@@ -34,6 +34,7 @@ Hierarchy:
                         SpawnPrefab: 65c17920-e9fa-4225-96c8-dcb8a6698d64:Prefabs/SmallObstacle
                         TimerDelay: 1.5
                         Enabled: true
+                        ShipState: ref!! af43752b-e1b8-4ac5-82d1-407a0c75f5bd
         -   Folder: null
             Entity:
                 Id: 1bc6056b-335d-4e01-9a91-7bc54110d768
@@ -66,6 +67,7 @@ Hierarchy:
                         SpawnPrefab: bbd91b67-be96-4e88-b322-f944adeeab05:Prefabs/ScoreCollectible
                         TimerDelay: 4.0
                         Enabled: true
+                        ShipState: ref!! af43752b-e1b8-4ac5-82d1-407a0c75f5bd
         -   Entity:
                 Id: 2def23a2-8cdb-4c74-abc9-5e7ecd4b75a7
                 Name: RandomLightSpawner
@@ -81,6 +83,7 @@ Hierarchy:
                         SpawnPrefab: e4668674-2d48-4a6c-ada8-2a618763be15:Prefabs/RandomLight
                         TimerDelay: 3.0
                         Enabled: false
+                        ShipState: null
         -   Entity:
                 Id: 336bb162-2e98-4ed0-8e93-4f7947029181
                 Name: Directional light
@@ -122,6 +125,7 @@ Hierarchy:
                         SpawnPrefab: 7172e249-9f55-4b34-8ade-7ccec558ec53:Prefabs/UnbreakableObstacle
                         TimerDelay: 4.0
                         Enabled: false
+                        ShipState: ref!! af43752b-e1b8-4ac5-82d1-407a0c75f5bd
         -   Entity:
                 Id: 4b64a727-46f3-4484-a6bc-29367b33e2cc
                 Name: Simple particle system
@@ -347,6 +351,7 @@ Hierarchy:
                             2e7ab06a4fc679d4958eb897be3411db*:
                                 Weapon: null
                                 Enabled: true
+                        Hull: 3
                     0c60407fc484372978cd774fb25fa37e: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
                         Id: 4d1f3360-7075-4d0b-877b-87f077969ca6
                         Enabled: true
@@ -389,7 +394,7 @@ Hierarchy:
                     850bbb27d717b20eb258bcd62454e940: !StarInterceptor.Gameplay.GameScores,StarInterceptor
                         Id: 3a87e024-0598-49e5-bcc2-0fa74a83c669
                         BeginingScore: 0
-                        BeginingHull: 3
+                        ShipState: ref!! af43752b-e1b8-4ac5-82d1-407a0c75f5bd
         -   Entity:
                 Id: dadc3e98-24dc-4fb8-b429-0c21a30c7a29
                 Name: Spot light

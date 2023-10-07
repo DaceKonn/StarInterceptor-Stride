@@ -54,6 +54,7 @@ Hierarchy:
                     5bfd01d160fec38e9abd2a716c5a24a1: !StarInterceptor.Gameplay.CollectibleCollisionHandler,StarInterceptor
                         Id: 0c2a02b2-6cb9-4874-8bfd-5a27b3600dd8
                         Trigger: ref!! 9b984b89-61c8-490b-b195-13008d547e55
+                        ShipState: null
                         ScoreValue: 10
         -   Entity:
                 Id: 743582b6-83d2-4dea-a973-b68286fbe798

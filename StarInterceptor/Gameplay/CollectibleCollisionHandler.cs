@@ -11,7 +11,7 @@ namespace StarInterceptor.Gameplay
 
         protected override Func<Task> CleanupTask(Entity collidedEntity)
         {
-            if (collidedEntity != null && collidedEntity.Name == "Spaceship" && _gameScores.Hull >= 0)
+            if (collidedEntity != null && collidedEntity.Name == "Spaceship" && ShipState.Hull >= 0)
             {
                 _gameScores.Score += ScoreValue;
             }

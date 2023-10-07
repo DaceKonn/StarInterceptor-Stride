@@ -159,6 +159,7 @@ Hierarchy:
                                     BaseDelay: 0.2
                                     Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
                                 Enabled: true
+                        Hull: 3
                     0c60407fc484372978cd774fb25fa37e: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
                         Id: 55f3c96b-6cd3-4362-893b-6fe0d641880d
                         Enabled: true

@@ -23,6 +23,8 @@ namespace StarInterceptor.Gameplay
         [MemberCollection(NotNullItems = true)]
         public FastCollection<WeaponSlot> Weapons = new FastCollection<WeaponSlot>();
 
+        public int Hull { get; set; }
+
 
         public override void Start()
         {

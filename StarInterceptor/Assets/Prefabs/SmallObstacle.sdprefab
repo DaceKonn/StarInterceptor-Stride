@@ -51,3 +51,4 @@ Hierarchy:
                     cae677d43d80a0bea0251f515fe19fdb: !StarInterceptor.Gameplay.ObstacleCollisionHandler,StarInterceptor
                         Id: 4847cafc-63e3-4259-be60-e6212d25db7e
                         Trigger: ref!! 5121e80c-1bda-401e-8e85-888e98147d85
+                        ShipState: null
