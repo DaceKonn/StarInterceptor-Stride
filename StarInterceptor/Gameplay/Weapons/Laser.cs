@@ -14,6 +14,5 @@ namespace StarInterceptor.Gameplay.Weapons
     [Serializable]
     public class Laser : Weapon
     {
-        public new float BaseDelay { get; set; } = 0.2f;
     }
 }

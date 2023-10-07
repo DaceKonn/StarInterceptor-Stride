@@ -156,8 +156,8 @@ Hierarchy:
                         Weapons:
                             e1db017bf9fc59cd89234f8df79519d7:
                                 Weapon: !StarInterceptor.Gameplay.Weapons.Laser,StarInterceptor
-                                    Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
                                     BaseDelay: 0.2
+                                    Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
                                 Enabled: true
                     0c60407fc484372978cd774fb25fa37e: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
                         Id: 55f3c96b-6cd3-4362-893b-6fe0d641880d

@@ -70,6 +70,7 @@ namespace StarInterceptor.Controllers
             AngleSingle angleSingle = new AngleSingle(90f * rotationDirection, AngleType.Degree);
 
             Entity.Transform.Rotation = Quaternion.RotationZ(angleSingle.Radians);
+            Entity.Transform.Position.Y = 0.0f;
             _characterComponent.UpdatePhysicsTransformation();
 
         }

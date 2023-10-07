@@ -33,7 +33,7 @@ namespace StarInterceptor.Controllers
                     return;
                 }
 
-                if (IfShooting() && ShipState.Weapons.Any())
+                if (IfShooting() && ShipState.Weapons.Any() && _timer <= 0.0f)
                 {
                     SpawnBullets();
                 }

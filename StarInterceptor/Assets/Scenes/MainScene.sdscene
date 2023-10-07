@@ -121,7 +121,7 @@ Hierarchy:
                         Id: 531aeac7-185b-47a8-b14c-33c42b4259f5
                         SpawnPrefab: 7172e249-9f55-4b34-8ade-7ccec558ec53:Prefabs/UnbreakableObstacle
                         TimerDelay: 4.0
-                        Enabled: true
+                        Enabled: false
         -   Entity:
                 Id: 4b64a727-46f3-4484-a6bc-29367b33e2cc
                 Name: Simple particle system
@@ -341,8 +341,8 @@ Hierarchy:
                         Weapons:
                             e1db017bf9fc59cd89234f8df79519d7:
                                 Weapon: !StarInterceptor.Gameplay.Weapons.Laser,StarInterceptor
-                                    Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
                                     BaseDelay: 0.2
+                                    Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
                                 Enabled: true
                             2e7ab06a4fc679d4958eb897be3411db*:
                                 Weapon: null
@@ -396,7 +396,7 @@ Hierarchy:
                 Components:
                     7e021e230f7f8bc4db0e20237b5c3e4f: !TransformComponent
                         Id: ebe3d3bb-7a66-4aaa-ad82-112b0c7869da
-                        Position: {X: -2.6823756E-08, Y: 0.0, Z: 0.306828}
+                        Position*: {X: -2.6823756E-08, Y: 0.0, Z: 0.307}
                         Rotation: {X: -0.0, Y: -1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
