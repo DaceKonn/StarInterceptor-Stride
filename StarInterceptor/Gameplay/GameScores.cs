@@ -1,9 +1,12 @@
 ﻿using StarInterceptor.Gameplay.ScoringSystem;
 using StarInterceptor.Gameplay.ShipDamageSystem;
 using Stride.Core;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
+using System.Linq;
+using System;
 
 namespace StarInterceptor.Gameplay
 {
@@ -11,6 +14,10 @@ namespace StarInterceptor.Gameplay
     {
 
         public ShipHullState ShipHull { get; set; }
+
+        public Color MaxHullColor { get; set; }
+        public Color MinorHullColor { get; set; }
+        public Color CriticalHullColor { get; set; }
 
         [DataMemberIgnore]
         //public int Hull { get; set; }
@@ -34,7 +41,14 @@ namespace StarInterceptor.Gameplay
         public override void Update()
         {
             _scoreBox.Text = Score.Score.ToString();
-            _hullBox.Text = ShipHull.CurrentHullValue.ToString();
+
+            _hullBox.Text = String.Concat(Enumerable.Repeat("|", ShipHull.CurrentHullValue));
+
+            var hullProcentage = (float)ShipHull.CurrentHullValue / (float)ShipHull.StartingHullValue;
+
+            if (hullProcentage >= 0.5f) _hullBox.TextColor = MinorHullColor;
+            if (ShipHull.CurrentHullValue == 0 || hullProcentage < 0.5f) _hullBox.TextColor = CriticalHullColor;
+            if (hullProcentage == 1) _hullBox.TextColor = MaxHullColor;
 
             if (ShipHull.CurrentHullValue == 0)
             {

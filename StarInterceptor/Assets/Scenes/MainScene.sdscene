@@ -427,6 +427,9 @@ Hierarchy:
                     850bbb27d717b20eb258bcd62454e940: !StarInterceptor.Gameplay.GameScores,StarInterceptor
                         Id: 3a87e024-0598-49e5-bcc2-0fa74a83c669
                         ShipHull: ref!! 860d5258-a04b-4860-9741-5a8d22f47060
+                        MaxHullColor: {R: 41, G: 255, B: 0, A: 0}
+                        MinorHullColor: {R: 255, G: 124, B: 0, A: 0}
+                        CriticalHullColor: {R: 255, G: 0, B: 0, A: 0}
                     f790721182f8dd787b96d9f0ca27fcd6: !StarInterceptor.Gameplay.ScoringSystem.CurrentScoreState,StarInterceptor
                         Id: 2c787545-c427-4e55-89c5-7da875c0ebbf
         -   Entity:
