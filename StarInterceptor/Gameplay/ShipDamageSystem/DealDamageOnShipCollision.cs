@@ -1,4 +1,8 @@
-﻿using Stride.Engine;
+﻿using StarInterceptor.Core;
+using StarInterceptor.Gameplay.CollisionsSystem;
+using Stride.Core;
+using Stride.Engine;
+using Stride.Games;
 using Stride.Physics;
 using System;
 using System.Collections.Generic;
@@ -8,28 +12,23 @@ using System.Threading.Tasks;
 
 namespace StarInterceptor.Gameplay.ShipDamageSystem
 {
+    [DataContract()]
+    [Serializable]
     [ComponentCategory("ShipDamageSystem")]
-    public class DealDamageOnShipCollision : AsyncScript
+    public class DealDamageOnShipCollision : AbstractCollisionHandler
     {
-        public override async Task Execute()
+        private DamageOnImpactState _damageOnImpactState;
+
+        internal override void Initialize(Entity entity)
         {
-            var _physicsComponent = Entity.Get<PhysicsComponent>();
-            var _damageOnImpactState = Entity.Get<DamageOnImpactState>();
+            _damageOnImpactState = entity.Get<DamageOnImpactState>();
+        }
 
-            while (Game.IsRunning)
+        internal override void HandleCollision(IGame game, Entity entity, PhysicsComponent collider)
+        {
+            if (((int)ReactWith & (int)collider.CollisionGroup) != 0)
             {
-                // Wait for the next collision event
-                var firstCollision = await _physicsComponent.NewCollision();
-
-                var collidedEntity = firstCollision.ColliderA.Entity == Entity ? firstCollision.ColliderB.Entity : firstCollision.ColliderA.Entity;
-
-                if (collidedEntity.Name == "Spaceship")
-                {
-                    ShipDamageEventRegistry.DamageToApplyEventKey.Broadcast(_damageOnImpactState.Damage);
-                }
-
-                
-
+                ShipDamageEventRegistry.DamageToApplyEventKey.Broadcast(_damageOnImpactState.Damage);
             }
         }
     }

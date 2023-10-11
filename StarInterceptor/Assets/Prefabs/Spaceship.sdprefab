@@ -151,27 +151,27 @@ Hierarchy:
                         ColliderShapes:
                             018289c78ff8fbc8953ad2abc2a5c94c: !ColliderShapeAssetDesc
                                 Shape: 0b951c54-d569-49da-8d37-1def459e4604:ColliderHull
-                    d1f5718123b0cd98cacbe7381795a024: !StarInterceptor.Gameplay.ShipState,StarInterceptor
-                        Id: 888810cb-9e83-4dca-86ea-c369dddb3038
+                    bc94fa818c71453f7fa3b5a6dadb3cee: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
+                        Id: 85b8f6f9-ee05-45da-8894-2074639bad88
+                        Enabled: true
+                        Speed: {StrafeSpeed: 200.0, ForwardSpeed: 200.0}
+                        MouseSensitivity: 10.0
+                    cc87e59bb07a12d9e3fd3c23f516d6be: !StarInterceptor.Gameplay.ShipDamageSystem.ShipHullState,StarInterceptor
+                        Id: 24bfafb8-2204-40bf-a72a-5d3716a016da
+                        StartingHullValue: 3
+                    616a00d4c5d23461777aebd08bd6df1a: !StarInterceptor.Gameplay.ShipState,StarInterceptor
+                        Id: 626bde11-70ac-4280-a929-a7c422ea5c47
                         Weapons:
-                            e1db017bf9fc59cd89234f8df79519d7:
+                            eae38120796a58fb700706278f4c0b79:
                                 Weapon: !StarInterceptor.Gameplay.Weapons.Laser,StarInterceptor
                                     BaseDelay: 0.2
                                     Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
                                 Enabled: true
-                        Hull: 3
-                    0c60407fc484372978cd774fb25fa37e: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
-                        Id: 55f3c96b-6cd3-4362-893b-6fe0d641880d
+                        Hull: 0
+                    5d7b6c62fdef0db1dd4d0af617d7bb05: !StarInterceptor.Controllers.ShootingController,StarInterceptor
+                        Id: a269d7bc-4e9b-4aaf-a2e4-41906336fbed
                         Enabled: true
-                        Speed: {StrafeSpeed: 200.0, ForwardSpeed: 200.0}
-                        MouseSensitivity: 10.0
-                    8824be57bc058146d8a7ea5e1e4b9cac: !StarInterceptor.Controllers.ShootingController,StarInterceptor
-                        Id: aef359c1-f4e8-4e7c-86b3-ab21b35b3bfc
-                        Enabled: true
-                        ShipState: ref!! 888810cb-9e83-4dca-86ea-c369dddb3038
-                    f8f7c2181adfed0f612202329fc2544b: !StarInterceptor.Gameplay.ShipDamageSystem.ShipHullState,StarInterceptor
-                        Id: 38eda4ca-98aa-4aba-acff-d6bb1c670969
-                        StartingHullValue: 3
+                        ShipState: ref!! 626bde11-70ac-4280-a929-a7c422ea5c47
         -   Entity:
                 Id: cdf5ad65-c159-4719-91d9-935765537538
                 Name: Spot light

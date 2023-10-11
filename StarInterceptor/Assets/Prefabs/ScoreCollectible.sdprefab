@@ -51,13 +51,13 @@ Hierarchy:
                     4a8d48837a36ed2494b42120a6e90758: !StarInterceptor.Gameplay.ScoringSystem.ScoreValueState,StarInterceptor
                         Id: ad40468f-4946-45fb-96b2-4b44afd9e28e
                         ScoreValue: 5
-                    9f2d1ef9f39f492fda3d37787a98272a: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
-                        Id: ca15d14c-728a-4985-9f90-34f2c870c27e
-                        Priority: 1
-                        DespawnOnCollisionWith: CharacterFilter, CustomFilter1
-                    f744ef3fca20fa1dd1fb552c96028905: !StarInterceptor.Gameplay.ScoringSystem.GrantScoreOnCollision,StarInterceptor
-                        Id: 3625f134-9124-4d8c-921c-b9670b3a85c1
-                        ScoreOnCollisionWith: CharacterFilter
+                    9fdce02b98bcbc2caa2cb10e53279f6d: !StarInterceptor.Gameplay.CollisionsSystem.CollisionSystemsComponent,StarInterceptor
+                        Id: a4e84a1e-7553-47b6-b6cf-ff6ef65f8c20
+                        CollisionHandlers:
+                            a7032473a128443c15ae74deff09f69d: !StarInterceptor.Gameplay.ScoringSystem.GrantScoreOnCollision,StarInterceptor
+                                ReactWith: CharacterFilter
+                            01f7fe6427ab68251bad1b929dbebfd1: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
+                                ReactWith: CharacterFilter, CustomFilter1
         -   Entity:
                 Id: 743582b6-83d2-4dea-a973-b68286fbe798
                 Name: Point light

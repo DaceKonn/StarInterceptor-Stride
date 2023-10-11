@@ -1,5 +1,6 @@
 ﻿using StarInterceptor.Core;
 using StarInterceptor.Gameplay.ShipDamageSystem;
+using Stride.Core;
 using Stride.Engine;
 using Stride.Physics;
 using System;
@@ -10,37 +11,21 @@ using System.Threading.Tasks;
 
 namespace StarInterceptor.Gameplay.CollisionsSystem
 {
+    [DataContract()]
+    [Serializable]
     [ComponentCategory("CollisionsSystem")]
-    public class DespawnOnCollision : AsyncScript
+    public class DespawnOnCollision : AbstractCollisionHandler
     {
-        public CollisionFilterGroupFlags DespawnOnCollisionWith { get; set; }
-
-        public override async Task Execute()
+        internal override void HandleCollision(Stride.Games.IGame game, Entity entity, PhysicsComponent collider)
         {
-            var _physicsComponent = Entity.Get<PhysicsComponent>();
-
-            while (Game.IsRunning)
+            if (((int)ReactWith & (int)collider.CollisionGroup) != 0)
             {
-                // Wait for the next collision event
-                var firstCollision = await _physicsComponent.NewCollision();
-
-                // Filter collisions based on collision groups
-/*                var filterAhitB = ((int)firstCollision.ColliderA.CanCollideWith) & ((int)firstCollision.ColliderB.CollisionGroup);
-                var filterBhitA = ((int)firstCollision.ColliderB.CanCollideWith) & ((int)firstCollision.ColliderA.CollisionGroup);
-
-                //Log.Info($"Collider A: {firstCollision.ColliderA.Entity.Name} ; Collider B: {firstCollision.ColliderB.Entity.Name}");
-
-                if (filterAhitB == 0 || filterBhitA == 0)
-                    continue;*/
-
-                var collisionGroup = firstCollision.ColliderA.Entity == Entity ? firstCollision.ColliderB.CollisionGroup : firstCollision.ColliderA.CollisionGroup;
-
-                if (((int)DespawnOnCollisionWith & (int)collisionGroup) != 0)
-                {
-                    Game.RemoveEntity(Entity);
-                }
-               
+                game.RemoveEntity(entity);
             }
+        }
+
+        internal override void Initialize(Entity entity)
+        {
         }
     }
 }

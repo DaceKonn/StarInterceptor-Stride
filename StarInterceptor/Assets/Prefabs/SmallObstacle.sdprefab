@@ -42,21 +42,21 @@ Hierarchy:
                             097f2b3f89bebc7527675d6db1c15818: !SphereColliderShapeDesc
                                 Is2D: false
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                    8b57d6e9d87261fe4282e137795dd66d: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
-                        Id: c3ac8056-731e-40ab-b15c-026f0cb1f6e9
+                    a4504141eff681d18a95a2521016674e: !StarInterceptor.Gameplay.CollisionsSystem.CollisionSystemsComponent,StarInterceptor
+                        Id: 957fc67f-0645-46d2-a244-c299dafbec43
+                        CollisionHandlers:
+                            38ac2f171119c01dc2370a4245549c60: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
+                                ReactWith: CharacterFilter, CustomFilter1
+                            16e7abb4e9479206dac9b7266abe8489: !StarInterceptor.Gameplay.ScoringSystem.GrantScoreOnCollision,StarInterceptor
+                                ReactWith: CustomFilter1
+                            0e84a33ed38ea3db9c30821ef1c78918: !StarInterceptor.Gameplay.ShipDamageSystem.DealDamageOnShipCollision,StarInterceptor
+                                ReactWith: CharacterFilter
+                    da5e6536843053083b1c6caccd4af9dc: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
+                        Id: 093867a1-5707-451d-8dc7-917caa2c4a6a
                         Speed: 2.0
-                    34c72ff90eac222e81c225f748aa413d: !StarInterceptor.Gameplay.ShipDamageSystem.DamageOnImpactState,StarInterceptor
-                        Id: 002eced9-8844-49a2-b4fa-2add1c1a46c2
-                        Damage: 1
-                    684949e81ff730d56824110e25c9ebe0: !StarInterceptor.Gameplay.ShipDamageSystem.DealDamageOnShipCollision,StarInterceptor
-                        Id: 57359551-b671-4570-9d41-59e743de7c77
-                    5365e4e4367b3c496b5b57be2c2f8f69: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
-                        Id: 3cb01ad2-ef1c-4150-ba44-5859e1722862
-                        Priority: 1
-                        DespawnOnCollisionWith: CharacterFilter, CustomFilter1
-                    f7c588bfe7c9aefffaf68aeed848ae1e: !StarInterceptor.Gameplay.ScoringSystem.GrantScoreOnCollision,StarInterceptor
-                        Id: aaa41d58-5a73-48d3-8f91-4e5a3672ff38
-                        ScoreOnCollisionWith: CustomFilter1
-                    32e7d936e34886686aebc15ae9d83be0: !StarInterceptor.Gameplay.ScoringSystem.ScoreValueState,StarInterceptor
-                        Id: 10adf2fd-1f43-45e4-9696-15bdff21e0c6
+                    aafad798081588c50e9e30ea6d1142ff: !StarInterceptor.Gameplay.ScoringSystem.ScoreValueState,StarInterceptor
+                        Id: e68fc0fb-3392-4df3-bc1b-5f5e8aa951cf
                         ScoreValue: 1
+                    ee968800d5a3a64417a23efb0235329f: !StarInterceptor.Gameplay.ShipDamageSystem.DamageOnImpactState,StarInterceptor
+                        Id: bb9460b8-91b2-4f0d-8146-6a52dc88c9a6
+                        Damage: 1

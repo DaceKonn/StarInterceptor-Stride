@@ -66,6 +66,8 @@ Hierarchy:
                     ef7d00680eeec507eb9cf4563a362e50: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
                         Id: b00c8422-699e-45a2-87cc-fb6576ddc5e5
                         Speed: -4.0
-                    b28e22a85f4ff606e1d475d12181b4d4: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
-                        Id: 60e0c97e-b522-49cd-818c-8d67504daa65
-                        DespawnOnCollisionWith: DefaultFilter, CustomFilter2
+                    faef5fe57360ef9d08790972da26d835: !StarInterceptor.Gameplay.CollisionsSystem.CollisionSystemsComponent,StarInterceptor
+                        Id: 9f91929f-4743-4423-b933-d544a608379d
+                        CollisionHandlers:
+                            17b5ebbda5670a74147fb9119ea52880: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
+                                ReactWith: DefaultFilter, CustomFilter2
