@@ -66,10 +66,6 @@ Hierarchy:
                     ef7d00680eeec507eb9cf4563a362e50: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
                         Id: b00c8422-699e-45a2-87cc-fb6576ddc5e5
                         Speed: -4.0
-                    114713dfcaa500df482a82ccbea88fdc: !StarInterceptor.Gameplay.Trigger,StarInterceptor
-                        Id: d58d0cb3-1808-4ebc-aa2e-d8009c7fc756
-                        TriggerCondition: StartOnly
-                    76e029d0ec118448cbb5a3265bee6a5d: !StarInterceptor.Gameplay.BulletCollisionHandler,StarInterceptor
-                        Id: f4a9b127-f9c6-4e6d-b455-cf1fc98b4f2b
-                        Trigger: ref!! d58d0cb3-1808-4ebc-aa2e-d8009c7fc756
-                        ShipState: null
+                    b28e22a85f4ff606e1d475d12181b4d4: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
+                        Id: 60e0c97e-b522-49cd-818c-8d67504daa65
+                        DespawnOnCollisionWith: DefaultFilter, CustomFilter2

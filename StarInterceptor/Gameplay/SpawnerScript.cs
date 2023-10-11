@@ -48,6 +48,7 @@ namespace StarInterceptor.Gameplay
                 _timer -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
                 return;
             }
+            
 
             float randomX = _random.Next(-_gameConfiguration.FieldRestrictions.X * 100 + 50, _gameConfiguration.FieldRestrictions.X * 100 + 50) / 100f;
             var entity = SpawnPrefab.Instantiate()[0];

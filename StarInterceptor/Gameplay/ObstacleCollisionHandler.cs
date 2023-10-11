@@ -1,4 +1,5 @@
 ﻿using StarInterceptor.Core;
+using StarInterceptor.Gameplay.ShipDamageSystem;
 using Stride.Engine;
 using System;
 using System.Threading.Tasks;
@@ -11,7 +12,8 @@ namespace StarInterceptor.Gameplay
         {
             if (collidedEntity != null && collidedEntity.Name == "Spaceship")
             {
-                ShipState.Hull--;
+                //ShipState.Hull--;
+                ShipDamageEventRegistry.DamageToApplyEventKey.Broadcast(1);
             }
 
             return async () =>

@@ -1,0 +1,6 @@
+!Texture
+Id: 1806c598-79ef-403c-b974-bb66fde5c5c7
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Textures/Tech_PlasticBase_roughness.jpg
+Type: !GrayscaleTextureType {}

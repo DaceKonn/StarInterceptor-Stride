@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Stride.Engine" Version="4.1.0.1948" />
+    <PackageReference Include="Stride.Video" Version="4.1.0.1948" />
+    <PackageReference Include="Stride.Physics" Version="4.1.0.1948" />
+    <PackageReference Include="Stride.Navigation" Version="4.1.0.1948" />
+    <PackageReference Include="Stride.Particles" Version="4.1.0.1948" />
+    <PackageReference Include="Stride.UI" Version="4.1.0.1948" />
+    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.1.0.1948" IncludeAssets="build;buildTransitive" />
+    <PackageReference Include="Stride.Voxels" Version="4.1.0.1948" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Gameplay\WeaponsSystem\" />
+    <Folder Include="Gameplay\ScoringSystem\" />
+    <Folder Include="Gameplay\ShipMovementSystem\" />
+  </ItemGroup>
+</Project>

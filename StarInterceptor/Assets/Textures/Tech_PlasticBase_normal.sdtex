@@ -1,0 +1,6 @@
+!Texture
+Id: 808ae407-547a-4603-bbca-f8c3417217ec
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Textures/Tech_PlasticBase_normal.jpg
+Type: !NormalMapTextureType {}

@@ -25,7 +25,7 @@ Hierarchy:
                     b49f6b20b0850d0cd2790718f237bbd1: !RigidbodyComponent
                         Id: e5a836d3-8b22-45f2-b0a3-191a4442721b
                         CollisionGroup: CustomFilter2
-                        CanCollideWith: StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanCollideWith: DefaultFilter, CharacterFilter, CustomFilter1
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5
@@ -48,14 +48,16 @@ Hierarchy:
                     45fea50fd832867c362fcf5d43c57d37: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
                         Id: 7953ef0d-1f04-450c-be19-13202974d3d4
                         Speed: 3.0
-                    29b293da855af932ad4f97fd2f3609af: !StarInterceptor.Gameplay.Trigger,StarInterceptor
-                        Id: 9b984b89-61c8-490b-b195-13008d547e55
-                        TriggerCondition: StartOnly
-                    5bfd01d160fec38e9abd2a716c5a24a1: !StarInterceptor.Gameplay.CollectibleCollisionHandler,StarInterceptor
-                        Id: 0c2a02b2-6cb9-4874-8bfd-5a27b3600dd8
-                        Trigger: ref!! 9b984b89-61c8-490b-b195-13008d547e55
-                        ShipState: null
-                        ScoreValue: 10
+                    4a8d48837a36ed2494b42120a6e90758: !StarInterceptor.Gameplay.ScoringSystem.ScoreValueState,StarInterceptor
+                        Id: ad40468f-4946-45fb-96b2-4b44afd9e28e
+                        ScoreValue: 5
+                    9f2d1ef9f39f492fda3d37787a98272a: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
+                        Id: ca15d14c-728a-4985-9f90-34f2c870c27e
+                        Priority: 1
+                        DespawnOnCollisionWith: CharacterFilter, CustomFilter1
+                    f744ef3fca20fa1dd1fb552c96028905: !StarInterceptor.Gameplay.ScoringSystem.GrantScoreOnCollision,StarInterceptor
+                        Id: 3625f134-9124-4d8c-921c-b9670b3a85c1
+                        ScoreOnCollisionWith: CharacterFilter
         -   Entity:
                 Id: 743582b6-83d2-4dea-a973-b68286fbe798
                 Name: Point light

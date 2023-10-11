@@ -169,6 +169,9 @@ Hierarchy:
                         Id: aef359c1-f4e8-4e7c-86b3-ab21b35b3bfc
                         Enabled: true
                         ShipState: ref!! 888810cb-9e83-4dca-86ea-c369dddb3038
+                    f8f7c2181adfed0f612202329fc2544b: !StarInterceptor.Gameplay.ShipDamageSystem.ShipHullState,StarInterceptor
+                        Id: 38eda4ca-98aa-4aba-acff-d6bb1c670969
+                        StartingHullValue: 3
         -   Entity:
                 Id: cdf5ad65-c159-4719-91d9-935765537538
                 Name: Spot light

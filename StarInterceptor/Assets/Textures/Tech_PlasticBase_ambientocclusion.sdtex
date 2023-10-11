@@ -1,0 +1,6 @@
+!Texture
+Id: b5b50ac6-f831-49ef-af5d-94528a80deed
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Textures/Tech_PlasticBase_ambientocclusion.jpg
+Type: !GrayscaleTextureType {}

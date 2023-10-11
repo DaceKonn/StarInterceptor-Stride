@@ -1,0 +1,6 @@
+!Texture
+Id: 6b595c74-9b52-47a1-bc9b-c46ab1268778
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Textures/Tech_PlasticBase_glossiness.jpg
+Type: !GrayscaleTextureType {}
