@@ -14,7 +14,7 @@ namespace StarInterceptor.Core
     //[DefaultEntityComponentProcessor(typeof(ScriptProcessor), ExecutionMode = ExecutionMode.Runtime)]
     [Display(Expand = ExpandRule.Once)]
     //[AllowMultipleComponents]
-    [ComponentOrder(1000)]
+    [ComponentOrder(999)]
     //[ComponentCategory("Scripts")]
     public class SimpleEntityComponent : EntityComponent
     {
