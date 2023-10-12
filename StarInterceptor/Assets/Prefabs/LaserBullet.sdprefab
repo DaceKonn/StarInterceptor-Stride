@@ -21,10 +21,10 @@ Hierarchy:
                         Type: !LightPoint
                             Color: !ColorRgbProvider
                                 Value: {R: 0.37254903, G: 1.0, B: 0.7176471}
-                            Radius: 3.0
                             Shadow:
                                 Size: Small
                                 BiasParameters: {}
+                        Intensity: 0.5
         -   Entity:
                 Id: f6e29d0e-9232-4b21-af1d-7447ac730bcf
                 Name: Capsule

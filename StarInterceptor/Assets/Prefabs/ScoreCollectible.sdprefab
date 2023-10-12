@@ -73,6 +73,7 @@ Hierarchy:
                         Type: !LightPoint
                             Color: !ColorRgbProvider
                                 Value: {R: 0.991875, G: 1.0, B: 0.35000002}
+                            Radius: 0.6
                             Shadow:
                                 Size: Small
                                 BiasParameters: {}

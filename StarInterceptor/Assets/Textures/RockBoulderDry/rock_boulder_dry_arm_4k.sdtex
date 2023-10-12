@@ -1,0 +1,7 @@
+!Texture
+Id: 0590ff42-f4ba-4204-91c7-c9d8f5f63686
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Textures/RockBoulderDry/rock_boulder_dry_arm_4k.jpg
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

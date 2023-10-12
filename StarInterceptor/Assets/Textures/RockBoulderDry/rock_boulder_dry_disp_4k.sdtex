@@ -1,0 +1,6 @@
+!Texture
+Id: 511f3e0b-d4f7-4d92-b6e9-6499740b6762
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Textures/RockBoulderDry/rock_boulder_dry_disp_4k.png
+Type: !GrayscaleTextureType {}

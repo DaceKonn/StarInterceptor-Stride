@@ -20,7 +20,7 @@ Hierarchy:
                         Id: 1c683af5-ad01-4df1-ae39-e716e21a2472
                         Model: 82456c01-300c-41fa-bc48-190beb684021:Models/Sphere
                         Materials:
-                            937c5998a29f5ddcfa2ee4962cc3f9a5~0: fb7618a9-1f34-490b-99a0-9ab3b9552a08:Materials/SpawnBad
+                            937c5998a29f5ddcfa2ee4962cc3f9a5~0: 1a45b5d5-3d9d-4e04-9789-7d6d3b09b185:Materials/Rock
                     94d57f93adfac4392933757a3c69561d: !RigidbodyComponent
                         Id: fac4aa14-3133-4e38-b6fb-053afc6b550b
                         CanCollideWith: DefaultFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10

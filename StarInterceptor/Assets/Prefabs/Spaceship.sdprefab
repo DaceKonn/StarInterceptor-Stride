@@ -196,4 +196,4 @@ Hierarchy:
                                 Enabled: true
                                 BiasParameters:
                                     DepthBias: 0.001
-                        Intensity: 1000.0
+                        Intensity: 5.0

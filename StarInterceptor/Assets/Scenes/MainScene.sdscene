@@ -17,7 +17,8 @@ Hierarchy:
         - ref!! 219ce6df-b31e-4661-9545-8286d780ddab
         - ref!! 49162a98-7d42-4bcb-a250-1277277b74de
         - ref!! 336bb162-2e98-4ed0-8e93-4f7947029181
-        - ref!! 94109e3e-018a-4113-a614-fb9ed6024ad5
+        - ref!! 6a36f8bf-c44e-495e-a811-8c0956370bf1
+        - ref!! dad18d0e-59e4-4306-b254-f73e6961540e
         - ref!! 2def23a2-8cdb-4c74-abc9-5e7ecd4b75a7
         - ref!! e2734343-535d-4122-b483-e333b0de8b0a
         - ref!! a23f670a-2441-40d9-9bf3-b2e9140180f8
@@ -96,19 +97,19 @@ Hierarchy:
         -   Folder: Light
             Entity:
                 Id: 336bb162-2e98-4ed0-8e93-4f7947029181
-                Name: Directional light
+                Name: Key Light
                 Components:
                     831801b441fa0f16258e94f4ab719710: !TransformComponent
                         Id: b14f1448-52d9-4d78-88c1-5b875652dc97
-                        Position: {X: 3.3014264, Y: 2.0, Z: -0.7528655}
-                        Rotation: {X: -0.25019598, Y: -0.802148, Z: -0.5175885, W: -0.16143979}
+                        Position: {X: -4.8910966, Y: 2.495168, Z: -8.742912}
+                        Rotation: {X: -0.88053316, Y: -0.054401867, Z: -0.31135502, W: 0.35321328}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     f595f1f9223b8c248279c09705b4ca37: !LightComponent
                         Id: eadf90c7-4371-48e9-8aef-a354994a6dd6
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
-                                Value: {R: 1.0, G: 0.9409375, B: 0.6625}
+                                Value: {R: 1.0, G: 0.87109375, B: 0.0625}
                             Shadow:
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf
@@ -118,7 +119,7 @@ Hierarchy:
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 ComputeTransmittance: false
                                 BiasParameters: {}
-                        Intensity: 0.2
+                        Intensity: 0.5
         -   Folder: Spawners
             Entity:
                 Id: 49162a98-7d42-4bcb-a250-1277277b74de
@@ -513,6 +514,32 @@ Hierarchy:
                             7f520994ddf7303614417b6fcf1a5b96: !StaticPlaneColliderShapeDesc
                                 Normal: {X: 0.0, Y: 0.0, Z: -1.0}
                                 Offset: -3.0
+        -   Folder: Light
+            Entity:
+                Id: 6a36f8bf-c44e-495e-a811-8c0956370bf1
+                Name: Key Light
+                Components:
+                    831801b441fa0f16258e94f4ab719710: !TransformComponent
+                        Id: 717d4759-cdb5-4ebb-a264-35cfc39fd4a9
+                        Position: {X: -3.9300818, Y: 2.495168, Z: -8.742912}
+                        Rotation: {X: -0.8021573, Y: 0.11689882, Z: 0.3465391, W: 0.47200495}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f595f1f9223b8c248279c09705b4ca37: !LightComponent
+                        Id: c26223bc-b3f0-4739-af2d-b46543e727ec
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.115312696, G: 0.068750024, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 0.2
         -   Folder: Core
             Entity:
                 Id: 88160fcc-7a2c-41bd-87ab-5a85774ac17d
@@ -526,32 +553,6 @@ Hierarchy:
                         Children: {}
                     b7822510273e10ae14d186ce5ac0c39e: !StarInterceptor.Controllers.MouseLockController,StarInterceptor
                         Id: 6edadb13-fc94-47af-9110-967f8b50d3f3
-        -   Folder: Light
-            Entity:
-                Id: 94109e3e-018a-4113-a614-fb9ed6024ad5
-                Name: Directional light
-                Components:
-                    831801b441fa0f16258e94f4ab719710: !TransformComponent
-                        Id: 79299797-3845-448b-b43f-b097fcd273a9
-                        Position: {X: 2.644196, Y: 2.0, Z: -0.7528655}
-                        Rotation: {X: 0.4668674, Y: 0.021128401, Z: -0.33545598, W: -0.81795955}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    f595f1f9223b8c248279c09705b4ca37: !LightComponent
-                        Id: 4f18fb99-22f2-4474-85a1-bbcdb098e719
-                        Type: !LightDirectional
-                            Color: !ColorRgbProvider
-                                Value: {R: 0.3875, G: 0.42578125, B: 1.0}
-                            Shadow:
-                                Enabled: true
-                                Filter: !LightShadowMapFilterTypePcf
-                                    FilterSize: Filter5x5
-                                Size: Large
-                                DepthRange: {}
-                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
-                                ComputeTransmittance: false
-                                BiasParameters: {}
-                        Intensity: 0.2
         -   Entity:
                 Id: 95236b38-41f1-4015-89cf-0cdff3d180d5
                 Name: Spaceship
@@ -774,6 +775,29 @@ Hierarchy:
                         CriticalHullColor: {R: 255, G: 0, B: 0, A: 0}
                     c49809791e14f9fdccd1fdc2fba080e9: !StarInterceptor.Gameplay.ScoringSystem.CurrentScoreState,StarInterceptor
                         Id: 659228d5-2554-40e1-8170-45cffc656b3b
+        -   Folder: Light
+            Entity:
+                Id: dad18d0e-59e4-4306-b254-f73e6961540e
+                Name: Rim Light
+                Components:
+                    dd4edd32a72ce25c68f952be1c4f13d4: !TransformComponent
+                        Id: 8b78ba3b-fa3f-4721-876f-1351ab1f06f2
+                        Position: {X: -2.7004304, Y: 2.495168, Z: -8.742912}
+                        Rotation: {X: 0.71536547, Y: 0.0, Z: 0.0, W: 0.6987505}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5234b35c90525168ced6feee6f082874: !LightComponent
+                        Id: 706449e2-deaa-46b3-b1a0-5594d55ce9e7
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.28140628, G: 0.21249998, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
         -   Entity:
                 Id: dadc3e98-24dc-4fb8-b429-0c21a30c7a29
                 Name: Spot light
@@ -798,7 +822,7 @@ Hierarchy:
                                 Enabled: true
                                 BiasParameters:
                                     DepthBias: 0.001
-                        Intensity: 1000.0
+                        Intensity: 5.0
             Base:
                 BasePartAsset: aa4ea6f4-11d1-4fd1-acdd-d5452f07f2f1:Prefabs/Spaceship
                 BasePartId: cdf5ad65-c159-4719-91d9-935765537538
@@ -818,3 +842,4 @@ Hierarchy:
                         Id: 70401144-a297-4682-9d75-66203533155b
                         Texture: 67f4e9ad-c1df-45ee-9054-11746c699a2c:Textures/Nebula1
                         Intensity: 0.02
+                        Is2D: true

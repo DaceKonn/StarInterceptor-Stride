@@ -1,0 +1,7 @@
+!Texture
+Id: 03395d88-4b5f-44bb-9a6e-a36955906f1d
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Nebula2.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
