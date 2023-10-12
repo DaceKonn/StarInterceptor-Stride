@@ -155,7 +155,7 @@ Hierarchy:
                         Id: 85b8f6f9-ee05-45da-8894-2074639bad88
                         Enabled: true
                         Speed: {StrafeSpeed: 200.0, ForwardSpeed: 200.0}
-                        MouseSensitivity: 10.0
+                        MouseSensitivity: 5.0
                     cc87e59bb07a12d9e3fd3c23f516d6be: !StarInterceptor.Gameplay.ShipDamageSystem.ShipHullState,StarInterceptor
                         Id: 24bfafb8-2204-40bf-a72a-5d3716a016da
                         StartingHullValue: 3

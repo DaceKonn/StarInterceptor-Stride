@@ -176,6 +176,8 @@ SharedRenderers:
             SkipBackground*: true
         AmbientOcclusion:
             Enabled*: true
+            NumberOfSamples*: 4
+            TempSize*: Size1012
         LocalReflections:
             Enabled*: true
             ResolvePassResolution: Full
