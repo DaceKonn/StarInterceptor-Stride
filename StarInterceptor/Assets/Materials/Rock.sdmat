@@ -11,8 +11,7 @@ Attributes:
             Scale: {X: 1.0, Y: 1.0}
             Offset: {X: 0.0, Y: 0.0}
         Intensity: !ComputeFloat
-            Value: 0.1
-        ScaleAndBias: false
+            Value: 0.002
         Stage: Vertex
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor

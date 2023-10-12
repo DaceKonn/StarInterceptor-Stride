@@ -14,13 +14,13 @@ Hierarchy:
                         Id: f8c99f5e-aa7b-4b8e-8aea-f32879c7a3f0
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     c1331348cd4dc6e19633183e6acfc2ba: !ModelComponent
                         Id: 1c683af5-ad01-4df1-ae39-e716e21a2472
-                        Model: 82456c01-300c-41fa-bc48-190beb684021:Models/Sphere
+                        Model: 7389739a-b090-408a-b163-1c1fd24f9f56:Models/Asteroid1
                         Materials:
-                            937c5998a29f5ddcfa2ee4962cc3f9a5~0: 1a45b5d5-3d9d-4e04-9789-7d6d3b09b185:Materials/Rock
+                            6ebc314664e625dad0e996bd9c3ad008~0: 1a45b5d5-3d9d-4e04-9789-7d6d3b09b185:Materials/Rock
                     94d57f93adfac4392933757a3c69561d: !RigidbodyComponent
                         Id: fac4aa14-3133-4e38-b6fb-053afc6b550b
                         CanCollideWith: DefaultFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
@@ -39,9 +39,8 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            097f2b3f89bebc7527675d6db1c15818: !SphereColliderShapeDesc
-                                Is2D: false
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                            097f2b3f89bebc7527675d6db1c15818: !ColliderShapeAssetDesc
+                                Shape: 3e1fe2f5-1028-4dfd-8401-59bf3dc86a67:ColliderAsteroid1
                     a4504141eff681d18a95a2521016674e: !StarInterceptor.Gameplay.CollisionsSystem.CollisionSystemsComponent,StarInterceptor
                         Id: 957fc67f-0645-46d2-a244-c299dafbec43
                         CollisionHandlers:

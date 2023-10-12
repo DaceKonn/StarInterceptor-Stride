@@ -1,0 +1,16 @@
+!Model
+Id: 7389739a-b090-408a-b163-1c1fd24f9f56
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Models/Asteroid1.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+ScaleImport: 0.2
+Materials:
+    473a29b3d0072e49505c802c345b7837:
+        Name: Material
+        MaterialInstance:
+            Material: 3bf65853-cf73-44ef-8592-637404750619:Models/Material
+Modifiers: {}
+~SourceHashes:
+    ad0529e76242d8458648d5d6cb8fe9b4~../../Resources/Models/Asteroid1.fbx: 288b5b0134a63aa7883684ca6f61bcb7

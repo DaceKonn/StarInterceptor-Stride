@@ -1,0 +1,21 @@
+!ColliderShapeAsset
+Id: 3e1fe2f5-1028-4dfd-8401-59bf3dc86a67
+SerializedVersion: {Stride: 3.0.0.0}
+Tags: []
+ColliderShapes:
+    1d5847cf9c0a31481f60dd016f92ffc2: !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
+        Model: 7389739a-b090-408a-b163-1c1fd24f9f56:Models/Asteroid1
+        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Decomposition:
+            Depth: 10
+            PosSampling: 10
+            AngleSampling: 10
+            PosRefine: 5
+            AngleRefine: 5
+            Alpha: 0.01
+            Threshold: 0.01
+            Enabled: false
