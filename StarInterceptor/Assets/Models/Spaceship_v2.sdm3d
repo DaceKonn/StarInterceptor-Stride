@@ -1,0 +1,31 @@
+!Model
+Id: 70d27004-c39e-4e11-b15b-f3d0a6654cf5
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Models/Spaceship_v2.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    8188ed9243c63eee20c912a052022c72:
+        Name: Exhaust
+        MaterialInstance:
+            Material: 038e47e2-a969-4c7f-bc2d-70f7b05208b8:Materials/Spaceship_v2/Exhaust
+    1400ded78477de51acba7857652a10c4:
+        Name: EngineCone
+        MaterialInstance:
+            Material: e9473b8d-7540-49f1-83e2-76312230f620:Materials/Spaceship_v2/EngineCone
+    ec552d176f9f35c2a8bddca23ab35149:
+        Name: MainBody
+        MaterialInstance:
+            Material: 62311e77-0e42-420f-8073-44a1866df536:Materials/Spaceship_v2/MainBody
+    a311d6965deb7b9c4da20b9bc0aaccd7:
+        Name: Head
+        MaterialInstance:
+            Material: 16d5cc87-3c19-40f5-9fab-3f22c7545461:Materials/Spaceship_v2/Head
+    55928d423233d609ec9d9ef30e998d59:
+        Name: Wings
+        MaterialInstance:
+            Material: 0b52cddf-2d33-4bde-ace5-d5b67e36742d:Materials/Spaceship_v2/Wings
+Modifiers: {}
+~SourceHashes:
+    18c7546af1ec58b22c825d848c406a81~../../Resources/Models/Spaceship_v2.fbx: e54b8f716e2189d8316cdf288daf66fd

@@ -3,7 +3,10 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Engine.Design;
 using Stride.Input;
+using Stride.Particles;
+using Stride.Particles.Components;
 using Stride.Physics;
+using System.Diagnostics.Eventing.Reader;
 
 namespace StarInterceptor.Controllers
 {
@@ -20,11 +23,16 @@ namespace StarInterceptor.Controllers
 
         private GameConfiguration _gameConfiguration;
         private CharacterComponent _characterComponent;
+        private ParticleSystemComponent _leftStrafeParticles;
+        private ParticleSystemComponent _rightStrafeParticles;
 
         public override void Start()
         {
             _gameConfiguration = Services.GetService<IGameSettingsService>()?.Settings.Configurations.Get<GameConfiguration>() ?? new GameConfiguration();
             _characterComponent = Entity.Components.Get<CharacterComponent>();
+            _leftStrafeParticles = Entity.FindChild("Left strafe").Components.Get<ParticleSystemComponent>();
+            _rightStrafeParticles = Entity.FindChild("Right strafe").Components.Get<ParticleSystemComponent>();
+
 
         }
 
@@ -55,7 +63,12 @@ namespace StarInterceptor.Controllers
                     //127.27922
                     //UpdateEntityPosition(deltaTime);
                     UpdateEntityVelocity(deltaTime);
+                    //UpdateEntityRotation(deltaTime);
+
+
                     UpdateEntityRotation(deltaTime);
+                    StrafeEngines();
+
                 }
 
             }
@@ -66,12 +79,37 @@ namespace StarInterceptor.Controllers
         private void UpdateEntityRotation(float deltaTime)
         {
             var rotationDirection = -_moveVector.X;
-            AngleSingle angleSingle = new AngleSingle(90f * rotationDirection, AngleType.Degree);
+            AngleSingle angleSingle = new AngleSingle(10f * rotationDirection, AngleType.Degree);
 
             Entity.Transform.Rotation = Quaternion.RotationZ(angleSingle.Radians);
             Entity.Transform.Position.Y = 0.0f;
             _characterComponent.UpdatePhysicsTransformation();
 
+        }
+
+        private void StrafeEngines()
+        {
+            if (_moveVector.X > 0)
+            {
+                //_leftStrafeParticles.Enabled = true;
+                _leftStrafeParticles.ParticleSystem.Play();
+                _rightStrafeParticles.ParticleSystem.StopEmitters();
+                //_leftStrafeParticles.Speed = 4f * _moveVector.X;
+                //_rightStrafeParticles.Enabled= false;
+            } else if (_moveVector.X < 0)
+            {
+                _rightStrafeParticles.ParticleSystem.Play();
+                _leftStrafeParticles.ParticleSystem.StopEmitters();
+                /*                _leftStrafeParticles.Enabled = false;
+                                _rightStrafeParticles.Enabled = true;*/
+                //_rightStrafeParticles.Speed = 4f * -_moveVector.X;
+            } else
+            {
+                _leftStrafeParticles.ParticleSystem.StopEmitters();
+                _rightStrafeParticles.ParticleSystem.StopEmitters();
+                /*                _leftStrafeParticles.Enabled = false;
+                                _rightStrafeParticles.Enabled = false;*/
+            }
         }
 
         private void ResetPosition()

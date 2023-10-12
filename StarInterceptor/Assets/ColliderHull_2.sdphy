@@ -1,0 +1,21 @@
+!ColliderShapeAsset
+Id: 80f06608-23ca-4a27-9e58-21d6692213f8
+SerializedVersion: {Stride: 3.0.0.0}
+Tags: []
+ColliderShapes:
+    b7fb72115f76a6cfbc7bee0b2724f12c: !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
+        Model: 70d27004-c39e-4e11-b15b-f3d0a6654cf5:Models/Spaceship_v2
+        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Decomposition:
+            Depth: 10
+            PosSampling: 10
+            AngleSampling: 10
+            PosRefine: 5
+            AngleRefine: 5
+            Alpha: 0.01
+            Threshold: 0.01
+            Enabled: false
