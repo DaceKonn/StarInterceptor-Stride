@@ -58,6 +58,8 @@ Hierarchy:
                                 ReactWith: CharacterFilter
                             01f7fe6427ab68251bad1b929dbebfd1: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
                                 ReactWith: CharacterFilter, CustomFilter1
+                    f238fde506ee69548bf4c6f74ce935fd: !StarInterceptor.SpawnRotation,StarInterceptor
+                        Id: 9e1befa0-ca2d-43b8-b61a-c1e823435d1b
         -   Entity:
                 Id: 743582b6-83d2-4dea-a973-b68286fbe798
                 Name: Point light

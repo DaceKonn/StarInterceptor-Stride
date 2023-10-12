@@ -6,21 +6,33 @@ using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
+using Stride.Physics;
 
 namespace StarInterceptor
 {
     public class SpawnRotation : SyncScript
     {
         // Declared public member fields and properties will show in the game studio
+        private PhysicsComponent _physicsComponent;
+        private Quaternion _rotation;
+        private Random Random = new Random();
 
         public override void Start()
         {
+            _physicsComponent = Entity.Components.Get<PhysicsComponent>();
+
+            float angle = (float)Random.Next(0, 100) / 10f;
+
+            _rotation = Quaternion.RotationX((float)Random.Next(0, 100) / 10000f) *
+                Quaternion.RotationY((float)Random.Next(0, 300) / 10000f) *
+                Quaternion.RotationZ((float)Random.Next(0, 300) / 10000f);
             // Initialization of the script.
         }
 
         public override void Update()
         {
-            // Do stuff every new frame
+            Entity.Transform.Rotation *= _rotation;
+            _physicsComponent.UpdatePhysicsTransformation();
         }
     }
 }
