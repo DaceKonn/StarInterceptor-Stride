@@ -1,5 +1,4 @@
-﻿using StarInterceptor.Gameplay.Weapons;
-using Stride.Core;
+﻿using Stride.Core;
 using Stride.Core.Serialization.Contents;
 using Stride.Engine;
 using Stride.Physics;

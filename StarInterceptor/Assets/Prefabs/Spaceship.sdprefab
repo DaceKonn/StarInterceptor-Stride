@@ -279,19 +279,13 @@ Hierarchy:
                     cc87e59bb07a12d9e3fd3c23f516d6be: !StarInterceptor.Gameplay.ShipDamageSystem.ShipHullState,StarInterceptor
                         Id: 24bfafb8-2204-40bf-a72a-5d3716a016da
                         StartingHullValue: 3
-                    616a00d4c5d23461777aebd08bd6df1a: !StarInterceptor.Gameplay.ShipState,StarInterceptor
-                        Id: 626bde11-70ac-4280-a929-a7c422ea5c47
-                        Weapons:
-                            eae38120796a58fb700706278f4c0b79:
-                                Weapon: !StarInterceptor.Gameplay.Weapons.Laser,StarInterceptor
-                                    BaseDelay: 0.2
-                                    Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
-                                Enabled: true
-                        Hull: 0
-                    5d7b6c62fdef0db1dd4d0af617d7bb05: !StarInterceptor.Controllers.ShootingController,StarInterceptor
-                        Id: a269d7bc-4e9b-4aaf-a2e4-41906336fbed
-                        Enabled: true
-                        ShipState: ref!! 626bde11-70ac-4280-a929-a7c422ea5c47
+                    0b64e259c4d9619f6425bc58265a55bb: !StarInterceptor.Gameplay.WeaponsSystem.WeaponLoadoutState,StarInterceptor
+                        Id: ee2d358d-a5f7-405c-bfc3-77ddba01eca6
+                        MainWeaponIds:
+                            df71528500ae8cf967fce74414a1e3f0: Plasma
+                        SecondaryWeaponIds: {}
+                    1e03eecefa9f2ce03eb7d71438e157ea: !StarInterceptor.Gameplay.WeaponsSystem.ShootingController,StarInterceptor
+                        Id: 5d73e23a-a97e-463a-9042-22bbfc3b2b4c
         -   Entity:
                 Id: cdf5ad65-c159-4719-91d9-935765537538
                 Name: Spot light

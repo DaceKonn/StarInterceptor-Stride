@@ -13,6 +13,7 @@ using Stride.Engine.Processors;
 using StarInterceptor.Gameplay.ShipDamageSystem;
 using StarInterceptor.Gameplay.ScoringSystem;
 using Stride.Engine.Events;
+using StarInterceptor.Gameplay.WeaponsSystem;
 
 namespace StarInterceptor.Core.Processors
 {
@@ -25,6 +26,10 @@ namespace StarInterceptor.Core.Processors
         public bool EnableShipDamageApplyProcessor = true;
         public bool EnableScoreApplyProcessor = true;
 
+
+        public bool EnableShipWeaponsProcessor = true;
+        public WeaponsRegistry WeaponsRegistry { get; set; }
+
         private EventReceiver<int> _scoreToApplyReveiver = new EventReceiver<int>(ScoreEventRegistry.ScoreToApplyKey);
         private EventReceiver<int> _damageToApplyReciever = new EventReceiver<int>(ShipDamageEventRegistry.DamageToApplyEventKey);
 
@@ -33,6 +38,7 @@ namespace StarInterceptor.Core.Processors
             // Initialization of the script.
             if (EnableShipDamageApplyProcessor) SceneSystem.SceneInstance.Processors.Add(new ShipDamageApplyProcessor());
             if (EnableScoreApplyProcessor) SceneSystem.SceneInstance.Processors.Add(new ScoreApplyProcessor());
+            if (EnableShipWeaponsProcessor) SceneSystem.SceneInstance.Processors.Add(new ShipWeaponsProcessor(WeaponsRegistry));
         }
 
         public override void Update()

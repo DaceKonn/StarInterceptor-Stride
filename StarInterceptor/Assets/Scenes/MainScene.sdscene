@@ -24,6 +24,7 @@ Hierarchy:
         - ref!! a23f670a-2441-40d9-9bf3-b2e9140180f8
         - ref!! 5d2d840a-71c9-4efd-941e-8dce7c56e10a
         - ref!! 5cee9aa9-7027-47f1-806f-72429fe50432
+        - ref!! d1bf6967-2f1a-40c8-a46f-8f777efa7d3d
     Parts:
         -   Folder: null
             Entity:
@@ -158,7 +159,6 @@ Hierarchy:
                         SpawnPrefab: 65c17920-e9fa-4225-96c8-dcb8a6698d64:Prefabs/SmallObstacle
                         TimerDelay: 1.5
                         Enabled: true
-                        ShipState: ref!! 420f3aaa-de1a-499d-8aeb-805d9c88d07c
         -   Folder: null
             Entity:
                 Id: 1bc6056b-335d-4e01-9a91-7bc54110d768
@@ -199,7 +199,6 @@ Hierarchy:
                         SpawnPrefab: bbd91b67-be96-4e88-b322-f944adeeab05:Prefabs/ScoreCollectible
                         TimerDelay: 6.0
                         Enabled: true
-                        ShipState: ref!! 420f3aaa-de1a-499d-8aeb-805d9c88d07c
         -   Folder: Light
             Entity:
                 Id: 2def23a2-8cdb-4c74-abc9-5e7ecd4b75a7
@@ -834,19 +833,13 @@ Hierarchy:
                     cc87e59bb07a12d9e3fd3c23f516d6be: !StarInterceptor.Gameplay.ShipDamageSystem.ShipHullState,StarInterceptor
                         Id: e95b7177-49b9-4ca3-a50f-9cbc4745bd27
                         StartingHullValue: 3
-                    616a00d4c5d23461777aebd08bd6df1a: !StarInterceptor.Gameplay.ShipState,StarInterceptor
-                        Id: 420f3aaa-de1a-499d-8aeb-805d9c88d07c
-                        Weapons:
-                            eae38120796a58fb700706278f4c0b79:
-                                Weapon: !StarInterceptor.Gameplay.Weapons.Laser,StarInterceptor
-                                    BaseDelay: 0.2
-                                    Bullet: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
-                                Enabled: true
-                        Hull: 0
-                    5d7b6c62fdef0db1dd4d0af617d7bb05: !StarInterceptor.Controllers.ShootingController,StarInterceptor
-                        Id: b2d611f5-6c71-4f0c-809d-4f45c650fdb9
-                        Enabled: true
-                        ShipState: ref!! 420f3aaa-de1a-499d-8aeb-805d9c88d07c
+                    0b64e259c4d9619f6425bc58265a55bb: !StarInterceptor.Gameplay.WeaponsSystem.WeaponLoadoutState,StarInterceptor
+                        Id: 24e48743-eefd-4a66-bc52-2109ead8809b
+                        MainWeaponIds:
+                            df71528500ae8cf967fce74414a1e3f0: Plasma
+                        SecondaryWeaponIds: {}
+                    1e03eecefa9f2ce03eb7d71438e157ea: !StarInterceptor.Gameplay.WeaponsSystem.ShootingController,StarInterceptor
+                        Id: fb740663-a69f-444c-9496-fab1f69335b5
             Base:
                 BasePartAsset: aa4ea6f4-11d1-4fd1-acdd-d5452f07f2f1:Prefabs/Spaceship
                 BasePartId: 6eccabac-762a-438e-af56-15b2b80802c7
@@ -992,6 +985,8 @@ Hierarchy:
                         EnableLogging: false
                         EnableShipDamageApplyProcessor: true
                         EnableScoreApplyProcessor: true
+                        EnableShipWeaponsProcessor: true
+                        WeaponsRegistry: ref!! bb36ce05-1143-4ee7-a48c-97c06a428799
         -   Entity:
                 Id: cc370c56-7218-48cc-9d2e-06997d3ae234
                 Name: LevelUI
@@ -1015,6 +1010,26 @@ Hierarchy:
                         CriticalHullColor: {R: 255, G: 0, B: 0, A: 0}
                     c49809791e14f9fdccd1fdc2fba080e9: !StarInterceptor.Gameplay.ScoringSystem.CurrentScoreState,StarInterceptor
                         Id: 659228d5-2554-40e1-8170-45cffc656b3b
+        -   Folder: Core
+            Entity:
+                Id: d1bf6967-2f1a-40c8-a46f-8f777efa7d3d
+                Name: WeaponRegistry
+                Components:
+                    05034aac1493e0feca78278bbfbc06a6: !TransformComponent
+                        Id: 0045b759-d1bd-4faa-8fa6-2c8d9c52005c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    4b288aeff8bad16cf1dd45566a3121b0: !StarInterceptor.Gameplay.WeaponsSystem.WeaponsRegistry,StarInterceptor
+                        Id: bb36ce05-1143-4ee7-a48c-97c06a428799
+                        Weapons:
+                            843fd9dfccdaac438a7b8754b5ef7c54:
+                                Id: Plasma
+                                Slot: Main
+                                Projectile: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
+                                ProjectileSpeed: 4.0
+                                DelayBetweenShots: 0.2
         -   Folder: Light
             Entity:
                 Id: dad18d0e-59e4-4306-b254-f73e6961540e

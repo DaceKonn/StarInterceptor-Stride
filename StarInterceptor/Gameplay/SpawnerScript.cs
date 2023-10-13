@@ -14,7 +14,6 @@ namespace StarInterceptor.Gameplay
         public Prefab SpawnPrefab;
         public float TimerDelay = 1.5f;
 
-        public ShipState ShipState { get; set; }
 
         private float _timer = 0.0f;
         private Random _random = new Random();
@@ -52,12 +51,6 @@ namespace StarInterceptor.Gameplay
 
             float randomX = _random.Next(-_gameConfiguration.FieldRestrictions.X * 100 + 50, _gameConfiguration.FieldRestrictions.X * 100 + 50) / 100f;
             var entity = SpawnPrefab.Instantiate()[0];
-
-            AbstractSyncCollisionHandler abstractSyncCollisionHandler = entity.Components.Get<AbstractSyncCollisionHandler>();
-            if (abstractSyncCollisionHandler != null)
-            {
-                abstractSyncCollisionHandler.ShipState = ShipState;
-            }
 
             entity.Transform.Position = new Vector3(randomX, 0.5f, 0);
             Entity.AddChild(entity);

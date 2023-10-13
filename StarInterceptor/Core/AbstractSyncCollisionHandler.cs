@@ -13,7 +13,6 @@ namespace StarInterceptor.Core
         // Declared public member fields and properties will show in the game studio
         public Trigger Trigger { get; set; }
         protected GameScores _gameScores { get; set; }
-        public ShipState ShipState { get; set; }
         private EventReceiver<CollisionEvent> _triggeredEvent;
         private bool _activated = false;
 

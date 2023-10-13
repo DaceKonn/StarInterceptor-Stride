@@ -1,5 +1,5 @@
 ﻿using Stride.Core;
-using Stride.Core.Serialization;
+using Stride.Core.Serialization.Contents;
 using Stride.Engine;
 using System;
 using System.Collections.Generic;
@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StarInterceptor.Gameplay.Weapons
+namespace StarInterceptor.Gameplay.WeaponsSystem
 {
-    [DataContract()]
-    [Serializable]
-    public class Laser : Weapon
+    public enum WeaponSlot
     {
+        Main,
+        Secondary
     }
 }
