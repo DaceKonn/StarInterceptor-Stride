@@ -497,7 +497,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                        Speed: 0.543
+                        Speed: 0.55
                         ParticleSystem:
                             Settings: {}
                             BoundingShape: null
@@ -510,10 +510,9 @@ Hierarchy:
                                         SamplerPosition: null
                                         SamplerSize: !ComputeCurveSamplerFloat
                                             Curve: !ComputeConstCurveFloat
-                                                Value: 0.1
+                                                Value: 0.05
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
-                                        AlphaAdditive: 0.5
                                         SoftEdgeDistance: 20.0
                                         ComputeColor: !ComputeFloat4
                                             Value: {X: 1.0, Y: 1.0, Z: 1.0, W: 0.0}
@@ -612,7 +611,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                        Speed: 0.543
+                        Speed: 0.55
                         ParticleSystem:
                             Settings: {}
                             BoundingShape: null
@@ -625,10 +624,9 @@ Hierarchy:
                                         SamplerPosition: null
                                         SamplerSize: !ComputeCurveSamplerFloat
                                             Curve: !ComputeConstCurveFloat
-                                                Value: 0.1
+                                                Value: 0.01
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
-                                        AlphaAdditive: 0.5
                                         SoftEdgeDistance: 20.0
                                         ComputeColor: !ComputeFloat4
                                             Value: {X: 1.0, Y: 1.0, Z: 1.0, W: 0.0}
@@ -870,7 +868,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                        Speed: 0.543
+                        Speed: 0.55
                         ParticleSystem:
                             Settings: {}
                             BoundingShape: null
@@ -883,10 +881,9 @@ Hierarchy:
                                         SamplerPosition: null
                                         SamplerSize: !ComputeCurveSamplerFloat
                                             Curve: !ComputeConstCurveFloat
-                                                Value: 0.1
+                                                Value: 0.05
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
-                                        AlphaAdditive: 0.5
                                         SoftEdgeDistance: 20.0
                                         ComputeColor: !ComputeFloat4
                                             Value: {X: 1.0, Y: 1.0, Z: 1.0, W: 0.0}

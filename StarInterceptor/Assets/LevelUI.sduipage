@@ -13,9 +13,9 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 20.384113
-                Height: 28.333332
+                Height: 28.333328
                 HorizontalAlignment: Left
-                Margin: {Left: 164.61589}
+                Margin: {Left: 99.61589, Top: -627.0, Bottom: 627.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -24,6 +24,7 @@ Hierarchy:
                 Font: 618f961a-8be1-439e-987a-3290ecbce471:SpriteFont
                 TextSize: 12.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextAlignment: Center
         -   UIElement: !Grid
                 Id: 077f77de-820d-486d-a997-49871a498096
                 DependencyProperties: {}
@@ -58,8 +59,8 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 20.384113
                 Height: 28.333332
-                HorizontalAlignment: Left
-                Margin: {Left: 164.61589}
+                HorizontalAlignment: Center
+                Margin: {Left: 99.61589}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -68,14 +69,15 @@ Hierarchy:
                 Font: 618f961a-8be1-439e-987a-3290ecbce471:SpriteFont
                 TextSize: 12.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextAlignment: Center
         -   UIElement: !TextBlock
                 Id: 65b70ffe-f73f-4aa9-9a4c-02944cca6e13
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 120.0
-                Height: 22.656252
+                Height: 22.65625
                 HorizontalAlignment: Left
-                Margin: {}
+                Margin: {Top: -627.0, Bottom: 632.67706}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
