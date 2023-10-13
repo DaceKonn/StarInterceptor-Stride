@@ -282,7 +282,7 @@ Hierarchy:
                     0b64e259c4d9619f6425bc58265a55bb: !StarInterceptor.Gameplay.WeaponsSystem.WeaponLoadoutState,StarInterceptor
                         Id: ee2d358d-a5f7-405c-bfc3-77ddba01eca6
                         MainWeaponIds:
-                            df71528500ae8cf967fce74414a1e3f0: Plasma
+                            df71528500ae8cf967fce74414a1e3f0: PDC
                         SecondaryWeaponIds: {}
                     1e03eecefa9f2ce03eb7d71438e157ea: !StarInterceptor.Gameplay.WeaponsSystem.ShootingController,StarInterceptor
                         Id: 5d73e23a-a97e-463a-9042-22bbfc3b2b4c

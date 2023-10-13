@@ -1,0 +1,74 @@
+!PrefabAsset
+Id: de28fd32-28d3-4708-acf3-1e69fe366aff
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 9d921132-4d03-4666-8faf-d184fb1e3b02
+    Parts:
+        -   Entity:
+                Id: 9d921132-4d03-4666-8faf-d184fb1e3b02
+                Name: Capsule
+                Components:
+                    64d0188fd91e15bd75f88e046f45db14: !TransformComponent
+                        Id: c0c4727b-c03e-42e1-85b6-32277c6df96a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.014056671, Y: 0.014056671, Z: 0.014056671}
+                        Children:
+                            e4d266a6b8ba68aeca224a59a6feb13c: ref!! db5b3e17-98bc-4eaf-a202-20f76119563b
+                    a7766f406ead6bbad3f101416f51afe2: !ModelComponent
+                        Id: bd5066c4-b1dd-4202-a666-ae8589a88ac2
+                        Model: 540d0c54-c248-4de5-ab61-b3c1d11de379:Models/Capsule
+                        Materials:
+                            c50da138d7aa4aa8623470357d20b629~0: 8d2c2bc5-3542-4324-b495-48c9c8102abd:Materials/PDCProjectile
+                    d7a1b249c4f0de0d1434dd0b7da45d62: !RigidbodyComponent
+                        Id: 1759f9d9-adc0-44b5-8231-b7632e58b182
+                        CollisionGroup: CustomFilter1
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3ae977ad09923ae5017ffddd396606fc: !CapsuleColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ef7d00680eeec507eb9cf4563a362e50: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
+                        Id: 1370131b-189e-417a-a1ae-81ec83c6bae7
+                        Speed: -4.0
+                    faef5fe57360ef9d08790972da26d835: !StarInterceptor.Gameplay.CollisionsSystem.CollisionSystemsComponent,StarInterceptor
+                        Id: 58333892-423d-41f2-8635-e252bd3b5586
+                        CollisionHandlers:
+                            17b5ebbda5670a74147fb9119ea52880: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
+                                ReactWith: DefaultFilter, CustomFilter2
+        -   Entity:
+                Id: b22a34b9-f250-4285-bcff-beb632b4a377
+                Name: Point light
+                Components:
+                    5a7193aaabc9e9180b0f206b137d90e7: !TransformComponent
+                        Id: db5b3e17-98bc-4eaf-a202-20f76119563b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1f273d481d9ba1c8d1260790d8344bc4: !LightComponent
+                        Id: 0ebd8d33-c0d6-4d0c-9de6-fc9be734ff49
+                        Type: !LightPoint
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 0.90588236, B: 0.32941177}
+                            Radius: 0.2
+                            Shadow:
+                                Size: Small
+                                BiasParameters: {}
+                        Intensity: 0.2

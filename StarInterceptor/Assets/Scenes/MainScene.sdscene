@@ -836,7 +836,7 @@ Hierarchy:
                     0b64e259c4d9619f6425bc58265a55bb: !StarInterceptor.Gameplay.WeaponsSystem.WeaponLoadoutState,StarInterceptor
                         Id: 24e48743-eefd-4a66-bc52-2109ead8809b
                         MainWeaponIds:
-                            df71528500ae8cf967fce74414a1e3f0: Plasma
+                            df71528500ae8cf967fce74414a1e3f0: PDC
                         SecondaryWeaponIds: {}
                     1e03eecefa9f2ce03eb7d71438e157ea: !StarInterceptor.Gameplay.WeaponsSystem.ShootingController,StarInterceptor
                         Id: fb740663-a69f-444c-9496-fab1f69335b5
@@ -1030,6 +1030,12 @@ Hierarchy:
                                 Projectile: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
                                 ProjectileSpeed: 4.0
                                 DelayBetweenShots: 0.2
+                            d39503601043abe21b6c2b4a053d2cbb:
+                                Id: PDC
+                                Slot: Main
+                                Projectile: de28fd32-28d3-4708-acf3-1e69fe366aff:Prefabs/PDCProjectile
+                                ProjectileSpeed: 3.0
+                                DelayBetweenShots: 0.01
         -   Folder: Light
             Entity:
                 Id: dad18d0e-59e4-4306-b254-f73e6961540e
