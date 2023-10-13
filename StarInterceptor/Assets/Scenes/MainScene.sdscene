@@ -513,6 +513,7 @@ Hierarchy:
                                                 Value: 0.1
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
+                                        AlphaAdditive: 0.5
                                         SoftEdgeDistance: 20.0
                                         ComputeColor: !ComputeFloat4
                                             Value: {X: 1.0, Y: 1.0, Z: 1.0, W: 0.0}
@@ -627,6 +628,7 @@ Hierarchy:
                                                 Value: 0.1
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
+                                        AlphaAdditive: 0.5
                                         SoftEdgeDistance: 20.0
                                         ComputeColor: !ComputeFloat4
                                             Value: {X: 1.0, Y: 1.0, Z: 1.0, W: 0.0}
@@ -884,6 +886,7 @@ Hierarchy:
                                                 Value: 0.1
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
+                                        AlphaAdditive: 0.5
                                         SoftEdgeDistance: 20.0
                                         ComputeColor: !ComputeFloat4
                                             Value: {X: 1.0, Y: 1.0, Z: 1.0, W: 0.0}

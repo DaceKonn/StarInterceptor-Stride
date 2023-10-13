@@ -55,17 +55,7 @@ namespace StarInterceptor.Controllers
 
                     float deltaTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
                     CalculateMoveVector(directionX, directionY);
-
-                    /*DebugText.Print("moveVector: " + moveVector.ToString(), new Int2(50, 350));
-                    DebugText.Print("mouse-delta: " + Input.MouseDelta.ToString(), new Int2(50, 400));
-                    DebugText.Print("mouse-position: " + Input.MousePosition.ToString(), new Int2(50, 50));
-                    DebugText.Print("ship position: " + Entity.Transform.Position.ToString(), new Int2(50, 100));*/
-                    //127.27922
-                    //UpdateEntityPosition(deltaTime);
                     UpdateEntityVelocity(deltaTime);
-                    //UpdateEntityRotation(deltaTime);
-
-
                     UpdateEntityRotation(deltaTime);
                     StrafeEngines();
 
@@ -91,87 +81,22 @@ namespace StarInterceptor.Controllers
         {
             if (_moveVector.X > 0)
             {
-                //_leftStrafeParticles.Enabled = true;
                 _leftStrafeParticles.ParticleSystem.Play();
                 _rightStrafeParticles.ParticleSystem.StopEmitters();
-                //_leftStrafeParticles.Speed = 4f * _moveVector.X;
-                //_rightStrafeParticles.Enabled= false;
             } else if (_moveVector.X < 0)
             {
-                _rightStrafeParticles.ParticleSystem.Play();
                 _leftStrafeParticles.ParticleSystem.StopEmitters();
-                /*                _leftStrafeParticles.Enabled = false;
-                                _rightStrafeParticles.Enabled = true;*/
-                //_rightStrafeParticles.Speed = 4f * -_moveVector.X;
+                _rightStrafeParticles.ParticleSystem.Play();
             } else
             {
                 _leftStrafeParticles.ParticleSystem.StopEmitters();
                 _rightStrafeParticles.ParticleSystem.StopEmitters();
-                /*                _leftStrafeParticles.Enabled = false;
-                                _rightStrafeParticles.Enabled = false;*/
             }
-        }
-
-        private void ResetPosition()
-        {
-            if (Input.HasKeyboard)
-            {
-                if (Input.IsKeyPressed(Keys.R))
-                {
-                    Entity.Transform.Position = new Vector3(0, 0.5f, 0);
-                }
-            }
-        }
-
-        private void UpdateEntityPosition(float deltaTime)
-        {
-            var currentEntityPosition = Entity.Transform.Position;
-            var newEntityPosition = currentEntityPosition + new Vector3(_moveVector.X * Speed.StrafeSpeed, _moveVector.Y, _moveVector.Z * Speed.ForwardSpeed) * deltaTime;
-
-            if (newEntityPosition.Z > 3)
-            {
-                newEntityPosition.Z = 3;
-            }
-            else if (newEntityPosition.Z < 3 - _gameConfiguration.FieldRestrictions.Y)
-            {
-                newEntityPosition.Z = 3 - _gameConfiguration.FieldRestrictions.Y;
-            }
-
-            if (newEntityPosition.X > _gameConfiguration.FieldRestrictions.X)
-            {
-                newEntityPosition.X = _gameConfiguration.FieldRestrictions.X;
-            }
-            else if (newEntityPosition.X < -_gameConfiguration.FieldRestrictions.X)
-            {
-                newEntityPosition.X = -_gameConfiguration.FieldRestrictions.X;
-            }
-
-            //DebugText.Print("move vector: " + moveVector.ToString(), new Int2(50, 250));
-
-            Entity.Transform.Position = newEntityPosition;
         }
 
         private void UpdateEntityVelocity(float deltaTime)
         {
             var velocity = new Vector3(_moveVector.X * Speed.StrafeSpeed, _moveVector.Y, _moveVector.Z * Speed.ForwardSpeed) * deltaTime;
-/*            if (Entity.Transform.Position.Z > 3 && velocity.Z > 0)
-            {
-                velocity.Z = 0f;
-            }
-            else if (Entity.Transform.Position.Z < 3 - GameConfiguration.FieldRestrictions.Y && velocity.Z < 0)
-            {
-                velocity.Z = 0f;
-            }*/
-
-/*            if (Entity.Transform.Position.X > GameConfiguration.FieldRestrictions.X && velocity.X > 0f)
-            {
-                velocity.X = 0f;
-            }
-            else if (Entity.Transform.Position.X < -GameConfiguration.FieldRestrictions.X && velocity.X < 0f)
-            {
-                velocity.X = 0f;
-            }*/
-
             _characterComponent.SetVelocity(velocity);
         }
 
