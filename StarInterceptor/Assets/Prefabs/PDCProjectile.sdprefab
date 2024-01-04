@@ -68,7 +68,7 @@ Hierarchy:
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 0.90588236, B: 0.32941177}
                             Radius: 0.2
-                            Shadow:
+                            Shadow: !LightPointShadowMap
                                 Size: Small
                                 BiasParameters: {}
                         Intensity: 0.2

@@ -24,19 +24,20 @@ namespace StarInterceptor.Core.Processors
 
         // Declared public member fields and properties will show in the game studio
         public bool EnableShipDamageApplyProcessor = true;
+        public bool EnableShipHullCollectibleProcessor = true;
         public bool EnableScoreApplyProcessor = true;
-
-
         public bool EnableShipWeaponsProcessor = true;
         public WeaponsRegistry WeaponsRegistry { get; set; }
 
         private EventReceiver<int> _scoreToApplyReveiver = new EventReceiver<int>(ScoreEventRegistry.ScoreToApplyKey);
         private EventReceiver<int> _damageToApplyReciever = new EventReceiver<int>(ShipDamageEventRegistry.DamageToApplyEventKey);
+        private EventReceiver<int> _hullToApplyReciever = new EventReceiver<int>(ShipDamageEventRegistry.HullToApplyEventKey);
 
         public override void Start()
         {
             // Initialization of the script.
             if (EnableShipDamageApplyProcessor) SceneSystem.SceneInstance.Processors.Add(new ShipDamageApplyProcessor());
+            if (EnableShipHullCollectibleProcessor) SceneSystem.SceneInstance.Processors.Add(new HullCollectibleApplyProcessor());
             if (EnableScoreApplyProcessor) SceneSystem.SceneInstance.Processors.Add(new ScoreApplyProcessor());
             if (EnableShipWeaponsProcessor) SceneSystem.SceneInstance.Processors.Add(new ShipWeaponsProcessor(WeaponsRegistry));
         }
@@ -47,6 +48,7 @@ namespace StarInterceptor.Core.Processors
             {
                 if (_scoreToApplyReveiver.TryReceive(out int score)) Log.Info($"Score event with value: {score}");
                 if (_damageToApplyReciever.TryReceive(out int damage)) Log.Info($"Damage event with value: {damage}");
+                if (_hullToApplyReciever.TryReceive(out int hull)) Log.Info($"Hull event with value: {hull}");
             }
         }
     }

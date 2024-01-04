@@ -15,6 +15,7 @@ namespace StarInterceptor.Gameplay
 
         public ShipHullState ShipHull { get; set; }
 
+        public Color ExtraHullColor { get; set; }
         public Color MaxHullColor { get; set; }
         public Color MinorHullColor { get; set; }
         public Color CriticalHullColor { get; set; }
@@ -46,9 +47,10 @@ namespace StarInterceptor.Gameplay
 
             var hullProcentage = (float)ShipHull.CurrentHullValue / (float)ShipHull.StartingHullValue;
 
-            if (hullProcentage >= 0.5f) _hullBox.TextColor = MinorHullColor;
+            if (hullProcentage >= 0.5f && hullProcentage < 1) _hullBox.TextColor = MinorHullColor;
             if (ShipHull.CurrentHullValue == 0 || hullProcentage < 0.5f) _hullBox.TextColor = CriticalHullColor;
             if (hullProcentage == 1) _hullBox.TextColor = MaxHullColor;
+            if (hullProcentage > 1) _hullBox.TextColor = ExtraHullColor;
 
             if (ShipHull.CurrentHullValue == 0)
             {

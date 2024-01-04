@@ -18,6 +18,7 @@ Hierarchy:
                         Children: {}
                     6954546ea816faef51e0f67e12046417: !ParticleSystemComponent
                         Id: e09281bb-5ff3-4970-bb08-235f07f3a49f
+                        Enabled: false
                         Control:
                             ResetSeconds: 5.0
                             Control: Play
@@ -131,6 +132,7 @@ Hierarchy:
                         Children: {}
                     29413c39edd837267e9605233e3b0e51: !ParticleSystemComponent
                         Id: 9950b3d5-2150-4aea-bd9d-bbf52999529f
+                        Enabled: false
                         Control:
                             ResetSeconds: 5.0
                             Control: Play
@@ -306,7 +308,7 @@ Hierarchy:
                             AngleOuter: 43.0
                             UVScale: {X: 1.0, Y: 1.0}
                             UVOffset: {X: 0.0, Y: 0.0}
-                            Shadow:
+                            Shadow: !LightStandardShadowMap
                                 Enabled: true
                                 BiasParameters:
                                     DepthBias: 0.001
@@ -323,6 +325,7 @@ Hierarchy:
                         Children: {}
                     29413c39edd837267e9605233e3b0e51: !ParticleSystemComponent
                         Id: c74c4d42-81e2-4fa3-b75b-644e71b1143f
+                        Enabled: false
                         Control:
                             ResetSeconds: 5.0
                             Control: Play
