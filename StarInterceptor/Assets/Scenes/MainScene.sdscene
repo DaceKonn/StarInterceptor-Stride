@@ -226,7 +226,7 @@ Hierarchy:
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 0.87109375, B: 0.0625}
-                            Shadow:
+                            Shadow: !LightDirectionalShadowMap
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf
                                     FilterSize: Filter5x5
@@ -762,7 +762,7 @@ Hierarchy:
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
                                 Value: {R: 0.115312696, G: 0.068750024, B: 1.0}
-                            Shadow:
+                            Shadow: !LightDirectionalShadowMap
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf
                                     FilterSize: Filter5x5
@@ -836,7 +836,7 @@ Hierarchy:
                     0b64e259c4d9619f6425bc58265a55bb: !StarInterceptor.Gameplay.WeaponsSystem.WeaponLoadoutState,StarInterceptor
                         Id: 24e48743-eefd-4a66-bc52-2109ead8809b
                         MainWeaponIds:
-                            df71528500ae8cf967fce74414a1e3f0: PDC
+                            df71528500ae8cf967fce74414a1e3f0*: PDC
                         SecondaryWeaponIds: {}
                     1e03eecefa9f2ce03eb7d71438e157ea: !StarInterceptor.Gameplay.WeaponsSystem.ShootingController,StarInterceptor
                         Id: fb740663-a69f-444c-9496-fab1f69335b5
@@ -1052,7 +1052,7 @@ Hierarchy:
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
                                 Value: {R: 0.28140628, G: 0.21249998, B: 1.0}
-                            Shadow:
+                            Shadow: !LightDirectionalShadowMap
                                 Enabled: true
                                 Size: Large
                                 DepthRange: {}
@@ -1079,7 +1079,7 @@ Hierarchy:
                             AngleOuter: 43.0
                             UVScale: {X: 1.0, Y: 1.0}
                             UVOffset: {X: 0.0, Y: 0.0}
-                            Shadow:
+                            Shadow: !LightStandardShadowMap
                                 Enabled: true
                                 BiasParameters:
                                     DepthBias: 0.001

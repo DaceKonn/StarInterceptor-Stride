@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic.Logging;
-using StarInterceptor.Core.Processors;
+﻿using StarInterceptor.Core.Processors;
 using Stride.Engine;
 using Stride.Engine.Events;
 using Stride.Games;

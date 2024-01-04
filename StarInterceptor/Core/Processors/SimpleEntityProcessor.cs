@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Stride.Profiling;
-using Microsoft.VisualBasic.Devices;
 using Stride.Audio;
 using Stride.Core.Serialization.Contents;
 using Stride.Engine.Processors;

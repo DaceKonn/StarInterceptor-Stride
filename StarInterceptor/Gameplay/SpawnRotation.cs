@@ -8,7 +8,7 @@ using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
 
-namespace StarInterceptor
+namespace StarInterceptor.Gameplay
 {
     public class SpawnRotation : SyncScript
     {
@@ -21,11 +21,11 @@ namespace StarInterceptor
         {
             _physicsComponent = Entity.Components.Get<PhysicsComponent>();
 
-            float angle = (float)Random.Next(0, 100) / 10f;
+            float angle = Random.Next(0, 100) / 10f;
 
-            _rotation = Quaternion.RotationX((float)Random.Next(0, 100) / 10000f) *
-                Quaternion.RotationY((float)Random.Next(0, 300) / 10000f) *
-                Quaternion.RotationZ((float)Random.Next(0, 300) / 10000f);
+            _rotation = Quaternion.RotationX(Random.Next(0, 100) / 10000f) *
+                Quaternion.RotationY(Random.Next(0, 300) / 10000f) *
+                Quaternion.RotationZ(Random.Next(0, 300) / 10000f);
             // Initialization of the script.
         }
 
