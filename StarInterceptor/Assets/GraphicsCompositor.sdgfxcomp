@@ -175,11 +175,11 @@ SharedRenderers:
             FogStart: 10.0
             SkipBackground*: true
         AmbientOcclusion:
-            Enabled*: true
+            Enabled*: false
             NumberOfSamples*: 4
             TempSize*: Size1012
         LocalReflections:
-            Enabled*: true
+            Enabled*: false
             ResolvePassResolution: Full
             DepthResolution*: Full
             RayTracePassResolution*: Full

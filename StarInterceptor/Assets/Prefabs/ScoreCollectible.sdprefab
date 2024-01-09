@@ -47,10 +47,10 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     45fea50fd832867c362fcf5d43c57d37: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
                         Id: 7953ef0d-1f04-450c-be19-13202974d3d4
-                        Speed: 3.0
+                        Speed: 1.5
                     4a8d48837a36ed2494b42120a6e90758: !StarInterceptor.Gameplay.ScoringSystem.ScoreValueState,StarInterceptor
                         Id: ad40468f-4946-45fb-96b2-4b44afd9e28e
-                        ScoreValue: 5
+                        ScoreValue: 35
                     9fdce02b98bcbc2caa2cb10e53279f6d: !StarInterceptor.Gameplay.CollisionsSystem.CollisionSystemsComponent,StarInterceptor
                         Id: a4e84a1e-7553-47b6-b6cf-ff6ef65f8c20
                         CollisionHandlers:

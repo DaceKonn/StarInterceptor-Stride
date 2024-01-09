@@ -159,7 +159,8 @@ Hierarchy:
                     ba158ed6d08db51eb902d549251adf45: !StarInterceptor.Gameplay.SpawnerScript,StarInterceptor
                         Id: 96a5db24-d975-46a1-8254-e2d7d7758885
                         SpawnPrefab: 65c17920-e9fa-4225-96c8-dcb8a6698d64:Prefabs/SmallObstacle
-                        TimerDelay: 1.5
+                        TimerDelaySeconds: 1.5
+                        DontSpawnAtStart: false
                         Enabled: true
         -   Folder: null
             Entity:
@@ -199,7 +200,8 @@ Hierarchy:
                     eb8122fdf908e7be930b8da4d1182f2d: !StarInterceptor.Gameplay.SpawnerScript,StarInterceptor
                         Id: f3dc2b1e-a581-40a3-a5dc-14151ee03f4e
                         SpawnPrefab: bbd91b67-be96-4e88-b322-f944adeeab05:Prefabs/ScoreCollectible
-                        TimerDelay: 6.0
+                        TimerDelaySeconds: 60.0
+                        DontSpawnAtStart: true
                         Enabled: true
         -   Folder: Light
             Entity:
@@ -790,7 +792,8 @@ Hierarchy:
                     5dc4e52cf7d8aaaebc89813b3f6c589c: !StarInterceptor.Gameplay.SpawnerScript,StarInterceptor
                         Id: eb1126d9-232b-4f96-a57e-76158e74c5b8
                         SpawnPrefab: 29fdb8cc-22d3-4331-9adb-9ace7ff0cff9:Prefabs/HealthCollectible
-                        TimerDelay: 1.5
+                        TimerDelaySeconds: 200.0
+                        DontSpawnAtStart: true
                         Enabled: true
         -   Folder: Core
             Entity:
@@ -856,7 +859,7 @@ Hierarchy:
                     0b64e259c4d9619f6425bc58265a55bb: !StarInterceptor.Gameplay.WeaponsSystem.WeaponLoadoutState,StarInterceptor
                         Id: 24e48743-eefd-4a66-bc52-2109ead8809b
                         MainWeaponIds:
-                            df71528500ae8cf967fce74414a1e3f0*: PDC
+                            df71528500ae8cf967fce74414a1e3f0*: Plasma
                         SecondaryWeaponIds: {}
                     1e03eecefa9f2ce03eb7d71438e157ea: !StarInterceptor.Gameplay.WeaponsSystem.ShootingController,StarInterceptor
                         Id: fb740663-a69f-444c-9496-fab1f69335b5

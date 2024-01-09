@@ -12,7 +12,8 @@ namespace StarInterceptor.Gameplay
         public Boolean Enabled { get; set; }
 
         public Prefab SpawnPrefab;
-        public float TimerDelay = 1.5f;
+        public float TimerDelaySeconds = 1.5f;
+        public bool DontSpawnAtStart = false;
 
 
         private float _timer = 0.0f;
@@ -29,6 +30,11 @@ namespace StarInterceptor.Gameplay
             }
 
             _gameConfiguration = Services.GetService<IGameSettingsService>()?.Settings.Configurations.Get<GameConfiguration>() ?? new GameConfiguration();
+
+            if (DontSpawnAtStart)
+            {
+                setTimer();
+            }
             // Initialization of the script.
         }
 
@@ -47,14 +53,20 @@ namespace StarInterceptor.Gameplay
                 _timer -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
                 return;
             }
-            
+
 
             float randomX = _random.Next(-_gameConfiguration.FieldRestrictions.X * 100 + 50, _gameConfiguration.FieldRestrictions.X * 100 + 50) / 100f;
             var entity = SpawnPrefab.Instantiate()[0];
 
             entity.Transform.Position = new Vector3(randomX, 0.5f, 0);
             Entity.AddChild(entity);
-            _timer = TimerDelay - _random.Next(0, 12) / 10f;
+            setTimer();
+        }
+
+        private void setTimer()
+        {
+            float randomValue = _random.Next(0, 12) / 10f;
+            _timer = TimerDelaySeconds - randomValue;
         }
     }
 }
