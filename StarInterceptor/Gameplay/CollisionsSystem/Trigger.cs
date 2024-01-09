@@ -7,7 +7,7 @@ using Stride.Physics;
 using System;
 using System.Threading.Tasks;
 
-namespace StarInterceptor.Gameplay
+namespace StarInterceptor.Gameplay.CollisionsSystem
 {
     public enum CollisionEventType
     {
@@ -30,7 +30,7 @@ namespace StarInterceptor.Gameplay
         StartAndEnd,
     }
 
-    [ComponentCategory("CollisionHelpers")]
+    [ComponentCategory("CollisionsSystem")]
     public class Trigger : AsyncScript
     {
         [Display("Condition")]
@@ -50,8 +50,8 @@ namespace StarInterceptor.Gameplay
                 var firstCollision = await trigger.NewCollision();
 
                 // Filter collisions based on collision groups
-                var filterAhitB = ((int)firstCollision.ColliderA.CanCollideWith) & ((int)firstCollision.ColliderB.CollisionGroup);
-                var filterBhitA = ((int)firstCollision.ColliderB.CanCollideWith) & ((int)firstCollision.ColliderA.CollisionGroup);
+                var filterAhitB = (int)firstCollision.ColliderA.CanCollideWith & (int)firstCollision.ColliderB.CollisionGroup;
+                var filterBhitA = (int)firstCollision.ColliderB.CanCollideWith & (int)firstCollision.ColliderA.CollisionGroup;
 
                 //Log.Info($"Collider A: {firstCollision.ColliderA.Entity.Name} ; Collider B: {firstCollision.ColliderB.Entity.Name}");
 

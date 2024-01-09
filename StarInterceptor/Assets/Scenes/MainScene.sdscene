@@ -156,7 +156,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    ba158ed6d08db51eb902d549251adf45: !StarInterceptor.Gameplay.SpawnerScript,StarInterceptor
+                    ba158ed6d08db51eb902d549251adf45: !StarInterceptor.Gameplay.SpawnSystem.SpawnerScript,StarInterceptor
                         Id: 96a5db24-d975-46a1-8254-e2d7d7758885
                         SpawnPrefab: 65c17920-e9fa-4225-96c8-dcb8a6698d64:Prefabs/SmallObstacle
                         TimerDelaySeconds: 1.5
@@ -197,7 +197,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    eb8122fdf908e7be930b8da4d1182f2d: !StarInterceptor.Gameplay.SpawnerScript,StarInterceptor
+                    eb8122fdf908e7be930b8da4d1182f2d: !StarInterceptor.Gameplay.SpawnSystem.SpawnerScript,StarInterceptor
                         Id: f3dc2b1e-a581-40a3-a5dc-14151ee03f4e
                         SpawnPrefab: bbd91b67-be96-4e88-b322-f944adeeab05:Prefabs/ScoreCollectible
                         TimerDelaySeconds: 60.0
@@ -789,7 +789,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    5dc4e52cf7d8aaaebc89813b3f6c589c: !StarInterceptor.Gameplay.SpawnerScript,StarInterceptor
+                    5dc4e52cf7d8aaaebc89813b3f6c589c: !StarInterceptor.Gameplay.SpawnSystem.SpawnerScript,StarInterceptor
                         Id: eb1126d9-232b-4f96-a57e-76158e74c5b8
                         SpawnPrefab: 29fdb8cc-22d3-4331-9adb-9ace7ff0cff9:Prefabs/HealthCollectible
                         TimerDelaySeconds: 200.0
@@ -1026,7 +1026,7 @@ Hierarchy:
                         Page: 58a6d5d9-d650-4dfe-9a1b-8c6aa9efd285:LevelUI
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 1.0, Z: 1.0}
-                    648d842dd64ec0d68bd73faa1183462c: !StarInterceptor.Gameplay.GameScores,StarInterceptor
+                    648d842dd64ec0d68bd73faa1183462c: !StarInterceptor.Gameplay.ScoringSystem.GameScores,StarInterceptor
                         Id: d41c021e-fc38-441b-8c5e-b1a1a28bbb6a
                         ShipHull: ref!! e95b7177-49b9-4ca3-a50f-9cbc4745bd27
                         ExtraHullColor: {R: 0, G: 102, B: 255, A: 0}

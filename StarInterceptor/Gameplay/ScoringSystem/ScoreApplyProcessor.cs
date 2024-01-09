@@ -1,6 +1,7 @@
 ﻿using StarInterceptor.Core;
 using StarInterceptor.Core.Processors;
 using StarInterceptor.Gameplay.ShipDamageSystem;
+using Stride.Engine;
 using Stride.Engine.Events;
 using Stride.Games;
 using System;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace StarInterceptor.Gameplay.ScoringSystem
 {
+    [ComponentCategory("ScoringSystem")]
     public class ScoreApplyProcessor : SimpleEntityProcessor<CurrentScoreState>
     {
         private EventReceiver<int> _scoreToApplyReveiver = new EventReceiver<int>(ScoreEventRegistry.ScoreToApplyKey);

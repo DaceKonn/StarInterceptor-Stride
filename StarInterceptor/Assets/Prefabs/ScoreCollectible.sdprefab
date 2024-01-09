@@ -45,7 +45,7 @@ Hierarchy:
                                 Height: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    45fea50fd832867c362fcf5d43c57d37: !StarInterceptor.Gameplay.SpawnMove,StarInterceptor
+                    45fea50fd832867c362fcf5d43c57d37: !StarInterceptor.Gameplay.SpawnSystem.SpawnMove,StarInterceptor
                         Id: 7953ef0d-1f04-450c-be19-13202974d3d4
                         Speed: 1.5
                     4a8d48837a36ed2494b42120a6e90758: !StarInterceptor.Gameplay.ScoringSystem.ScoreValueState,StarInterceptor
@@ -58,7 +58,7 @@ Hierarchy:
                                 ReactWith: CharacterFilter
                             01f7fe6427ab68251bad1b929dbebfd1: !StarInterceptor.Gameplay.CollisionsSystem.DespawnOnCollision,StarInterceptor
                                 ReactWith: CharacterFilter, CustomFilter1
-                    f238fde506ee69548bf4c6f74ce935fd: !StarInterceptor.Gameplay.SpawnRotation,StarInterceptor
+                    f238fde506ee69548bf4c6f74ce935fd: !StarInterceptor.Gameplay.SpawnSystem.SpawnRotation,StarInterceptor
                         Id: 9e1befa0-ca2d-43b8-b61a-c1e823435d1b
         -   Entity:
                 Id: 743582b6-83d2-4dea-a973-b68286fbe798

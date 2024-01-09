@@ -13,6 +13,7 @@ using static BulletSharp.Dbvt;
 
 namespace StarInterceptor.Gameplay.CollisionsSystem
 {
+    [ComponentCategory("CollisionsSystem")]
     public class CollisionSystemsComponent : AsyncScript
     {
         [DataMember(200)]

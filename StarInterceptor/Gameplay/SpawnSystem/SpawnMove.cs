@@ -2,7 +2,7 @@
 using Stride.Engine;
 using System.Linq;
 
-namespace StarInterceptor.Gameplay
+namespace StarInterceptor.Gameplay.SpawnSystem
 {
     [ComponentCategory("Spawns")]
     public class SpawnMove : SyncScript

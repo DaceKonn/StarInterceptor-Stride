@@ -8,8 +8,9 @@ using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
 
-namespace StarInterceptor.Gameplay
+namespace StarInterceptor.Gameplay.SpawnSystem
 {
+    [ComponentCategory("Spawns")]
     public class SpawnRotation : SyncScript
     {
         // Declared public member fields and properties will show in the game studio

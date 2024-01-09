@@ -1,4 +1,5 @@
-﻿using StarInterceptor.Gameplay;
+﻿using StarInterceptor.Gameplay.CollisionsSystem;
+using StarInterceptor.Gameplay.ScoringSystem;
 using Stride.Engine;
 using Stride.Engine.Events;
 using System;

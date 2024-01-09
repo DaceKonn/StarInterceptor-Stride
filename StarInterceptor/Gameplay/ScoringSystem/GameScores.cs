@@ -1,5 +1,4 @@
-﻿using StarInterceptor.Gameplay.ScoringSystem;
-using StarInterceptor.Gameplay.ShipDamageSystem;
+﻿using StarInterceptor.Gameplay.ShipDamageSystem;
 using Stride.Core;
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -8,8 +7,9 @@ using Stride.UI.Controls;
 using System.Linq;
 using System;
 
-namespace StarInterceptor.Gameplay
+namespace StarInterceptor.Gameplay.ScoringSystem
 {
+    [ComponentCategory("ScoringSystem")]
     public class GameScores : SyncScript
     {
 
@@ -43,9 +43,9 @@ namespace StarInterceptor.Gameplay
         {
             _scoreBox.Text = Score.Score.ToString();
 
-            _hullBox.Text = String.Concat(Enumerable.Repeat("|", ShipHull.CurrentHullValue));
+            _hullBox.Text = string.Concat(Enumerable.Repeat("|", ShipHull.CurrentHullValue));
 
-            var hullProcentage = (float)ShipHull.CurrentHullValue / (float)ShipHull.StartingHullValue;
+            var hullProcentage = ShipHull.CurrentHullValue / (float)ShipHull.StartingHullValue;
 
             if (hullProcentage >= 0.5f && hullProcentage < 1) _hullBox.TextColor = MinorHullColor;
             if (ShipHull.CurrentHullValue == 0 || hullProcentage < 0.5f) _hullBox.TextColor = CriticalHullColor;

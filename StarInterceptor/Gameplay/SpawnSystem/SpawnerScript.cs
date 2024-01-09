@@ -4,12 +4,12 @@ using Stride.Engine;
 using Stride.Engine.Design;
 using System;
 
-namespace StarInterceptor.Gameplay
+namespace StarInterceptor.Gameplay.SpawnSystem
 {
     [ComponentCategory("Spawns")]
     public class SpawnerScript : SyncScript
     {
-        public Boolean Enabled { get; set; }
+        public bool Enabled { get; set; }
 
         public Prefab SpawnPrefab;
         public float TimerDelaySeconds = 1.5f;
