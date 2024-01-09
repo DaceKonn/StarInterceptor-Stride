@@ -851,7 +851,7 @@ Hierarchy:
                     bc94fa818c71453f7fa3b5a6dadb3cee: !StarInterceptor.Controllers.MouseFollowController,StarInterceptor
                         Id: a70de2de-a3ad-4e39-8ffc-bfcc12a12604
                         Enabled: true
-                        Speed: {StrafeSpeed: 200.0, ForwardSpeed: 200.0}
+                        Speed: {StrafeSpeed*: 400.0, ForwardSpeed: 200.0}
                         MouseSensitivity: 5.0
                     cc87e59bb07a12d9e3fd3c23f516d6be: !StarInterceptor.Gameplay.ShipDamageSystem.ShipHullState,StarInterceptor
                         Id: e95b7177-49b9-4ca3-a50f-9cbc4745bd27
