@@ -11,6 +11,13 @@ namespace StarInterceptor.Gameplay.SpawnSystem
         public float Speed = 0.0f;
         Entity Despawner;
 
+        public static SpawnMove Instantiate(float speed)
+        {
+            SpawnMove spawnMove = new SpawnMove();
+            spawnMove.Speed = speed;
+            return spawnMove;
+        }
+
 
         public override void Start()
         {

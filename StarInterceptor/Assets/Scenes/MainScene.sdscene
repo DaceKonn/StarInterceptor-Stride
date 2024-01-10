@@ -1053,13 +1053,13 @@ Hierarchy:
                                 Id: Plasma
                                 Slot: Main
                                 Projectile: cc1f03a0-96a0-4825-be1e-cbdad40079c2:Prefabs/LaserBullet
-                                ProjectileSpeed: 4.0
+                                ProjectileSpeed: 3.0
                                 DelayBetweenShots: 0.2
                             d39503601043abe21b6c2b4a053d2cbb:
                                 Id: PDC
                                 Slot: Main
                                 Projectile: de28fd32-28d3-4708-acf3-1e69fe366aff:Prefabs/PDCProjectile
-                                ProjectileSpeed: 3.0
+                                ProjectileSpeed: 4.0
                                 DelayBetweenShots: 0.01
         -   Folder: Light
             Entity:

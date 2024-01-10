@@ -1,4 +1,5 @@
 ﻿using StarInterceptor.Core.Processors;
+using StarInterceptor.Gameplay.SpawnSystem;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Engine.Events;
@@ -48,7 +49,7 @@ namespace StarInterceptor.Gameplay.WeaponsSystem
             
             if (weaponSlotFired.Equals(WeaponSlot.Main) && weaponLoadoutState.MainWeaponPauseTimer <= 0)
             {
-                SpawnProjectile(weaponLoadoutState.Entity, _selectedMainWeapon.Projectile);
+                SpawnProjectile(weaponLoadoutState.Entity, _selectedMainWeapon);
                 IncreasePauseTimer(weaponLoadoutState, _selectedMainWeapon.DelayBetweenShots);
             }
             
@@ -64,18 +65,11 @@ namespace StarInterceptor.Gameplay.WeaponsSystem
             weaponLoadoutState.MainWeaponPauseTimer = delayBetweenShots;
         }
 
-        private void SpawnProjectile(Entity entity, Prefab projectile)
+        private void SpawnProjectile(Entity entity, Weapon weapon)
         {
-            /*
-             var entity = ShipState.Weapons[0].Weapon.Bullet.Instantiate()[0];
-                        entity.Transform.Position = Entity.Transform.Position + new Vector3(0f, 0.5f, -0.2f);
-                        Entity.Scene.Entities.Add(entity);
-                        _timer = ShipState.Weapons[0].Weapon.BaseDelay;
-
-             */
-
-            var projectileEntity = projectile.Instantiate()[0];
+            var projectileEntity = weapon.Projectile.Instantiate()[0];
             projectileEntity.Transform.Position = entity.Transform.Position + new Vector3(0f, 0.5f, -0.2f);
+            projectileEntity.Add(SpawnMove.Instantiate(-weapon.ProjectileSpeed));
             entity.Scene.Entities.Add(projectileEntity);
         }
 
